@@ -1,6 +1,6 @@
 ---
 description: Erstelle professionelle Lernskripte zu technischen Themen basierend auf dem learning_script_template.md mit schrittweisem Aufbau und Benutzer-Feedback
-tools: ['editFiles', 'fetch', 'runCommands', 'runTasks', 'search', 'searchResults', 'usages', 'add_observations', 'create_entities', 'create_relations', 'delete_entities', 'delete_observations', 'delete_relations', 'Ref', 'deep_researcher_start', 'web_search_exa', 'wikipedia_search_exa', 'filesystem']
+tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'terminalSelection', 'terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'searchResults', 'githubRepo', 'extensions', 'editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'Ref', 'add_observations', 'create_entities', 'create_relations', 'delete_entities', 'delete_observations', 'delete_relations', 'deep_researcher_start', 'web_search_exa']
 ---
 
 # Lernskript-Ersteller Chat Mode
