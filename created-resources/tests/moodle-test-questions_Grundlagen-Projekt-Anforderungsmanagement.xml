@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Kategorie-Definition -->
+<question type="category">
+  <category>
+    <text>$course$/Grundlagen Projekt- &amp; Anforderungsmanagement</text>
+  </category>
+</question>
+
+<!-- =================================== -->
+<!-- MULTIPLE CHOICE FRAGEN            -->
+<!-- =================================== -->
+
+<!-- MC Frage 1 -->
+<question type="multichoice">
+  <name>
+    <text>Definition: Funktionale vs. Nicht-funktionale Anforderung</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Welche der folgenden Aussagen beschreibt am besten eine <strong>nicht-funktionale Anforderung</strong>?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Nicht-funktionale Anforderungen beschreiben, WIE ein System etwas tun soll (Qualitätsmerkmale), während funktionale Anforderungen beschreiben, WAS ein System tun soll.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Die Anmeldung am System muss in weniger als 2 Sekunden erfolgen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Korrekt. Dies ist eine Anforderung an die Performance und somit nicht-funktional.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Der Benutzer muss sich mit E-Mail und Passwort anmelden können.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Dies beschreibt eine konkrete Funktion des Systems und ist daher eine funktionale Anforderung.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Das System muss Rechnungen im PDF-Format erstellen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Dies ist eine klare Funktionsbeschreibung und somit eine funktionale Anforderung.</p>]]></text>
+    </feedback>
+  </answer>
+    <answer fraction="0" format="html">
+    <text><![CDATA[<p>Ein Administrator kann neue Benutzer anlegen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Dies beschreibt eine Fähigkeit des Systems, also eine funktionale Anforderung.</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- MC Frage 2 -->
+<question type="multichoice">
+  <name>
+    <text>Vergleich: Agil vs. Traditionell</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Welches Merkmal ist typisch für ein <strong>agiles Vorgehensmodell</strong> wie Scrum im Gegensatz zu einem traditionellen Modell wie dem Wasserfallmodell?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Agile Modelle zeichnen sich durch Flexibilität, iterative Entwicklung und eine enge Einbindung des Kunden aus. Änderungen sind willkommen, während traditionelle Modelle auf einer detaillierten Vorausplanung basieren und Änderungen vermeiden wollen.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Änderungen an den Anforderungen sind während des gesamten Projekts willkommen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Korrekt. Das Reagieren auf Veränderungen ist ein Kernwert agiler Entwicklung.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Die Anforderungen werden zu Beginn vollständig definiert und "eingefroren".</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Dies ist ein klassisches Merkmal des Wasserfallmodells.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Der Prozess ist streng sequenziell, eine Phase folgt auf die andere.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Das ist die Definition des Wasserfallmodells. Agile Modelle sind iterativ.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Eine umfassende Dokumentation ist wichtiger als funktionierende Software.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Das Agile Manifest stellt funktionierende Software über umfassende Dokumentation.</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- MC Frage 3 -->
+<question type="multichoice">
+  <name>
+    <text>Erhebungstechnik: Vorteil Workshop</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Was ist ein wesentlicher Vorteil von Workshops als Methode zur Anforderungserhebung im Vergleich zu Einzelinterviews?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Workshops bringen verschiedene Stakeholder zusammen, was die Konsensbildung und Kreativität fördert und oft effizienter ist als viele einzelne Gespräche.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Sie fördern die Konsensbildung und decken Konflikte zwischen Stakeholdern sofort auf.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Korrekt. Die direkte Interaktion der Teilnehmer ist eine der größten Stärken von Workshops.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Sie sind ideal, um das tiefgehende, ungestörte Wissen einer einzelnen Person zu erfragen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Das ist der primäre Vorteil eines Interviews, nicht eines Workshops.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Sie garantieren, dass die Meinung der Teilnehmer nicht durch andere beeinflusst wird.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Das Gegenteil ist der Fall. Gruppendynamik ist ein zentrales Element, was auch eine Gefahr (dominante Teilnehmer) sein kann.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Sie benötigen keine Moderation.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Eine gute, neutrale Moderation ist ein kritischer Erfolgsfaktor für Workshops.</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- MC Frage 4 -->
+<question type="multichoice">
+  <name>
+    <text>Beschreibungstechnik: User Story</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Welches der folgenden Beispiele ist eine korrekt formulierte User Story nach dem Standardformat?</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Eine User Story folgt dem Format: "Als &lt;Rolle&gt; möchte ich &lt;Ziel/Wunsch&gt;, um &lt;Nutzen&gt; zu erreichen." Sie beschreibt den Wert aus Nutzersicht.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Als Schüler möchte ich meine Hausaufgaben online einsehen können, um zu wissen, was ich bis wann erledigen muss.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Korrekt. Diese Antwort enthält Rolle, Ziel und Nutzen.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Das System muss dem Schüler die Hausaufgaben anzeigen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Das ist eine klassische funktionale Anforderung, aber keine User Story, da Rolle und Nutzen fehlen.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Ich will meine Hausaufgaben sehen.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Hier fehlen die Rolle und der explizite Nutzen.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Implementierung der Hausaufgaben-Ansicht mit einer SQL-Datenbank.</p>]]></text>
+    <feedback format="html">
+      <text><![CDATA[<p>Falsch. Das ist eine technische Aufgabe, keine Anforderung aus Nutzersicht.</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- =================================== -->
+<!-- ZUORDNUNGSFRAGEN (MATCHING)       -->
+<!-- =================================== -->
+
+<!-- Matching Frage 1 -->
+<question type="matching">
+  <name>
+    <text>Zuordnung: Grundbegriffe des Projektmanagements</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Ordnen Sie die folgenden Begriffe aus dem Projekt- und Anforderungsmanagement ihren korrekten Definitionen zu.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Diese Begriffe bilden die Grundlage für das Verständnis von Projekten. Ein Projekt ist ein Vorhaben, Stakeholder sind Betroffene, eine Anforderung ist eine Bedingung und Requirement-Engineering ist der Prozess zur Ermittlung dieser Bedingungen.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <shuffleanswers>true</shuffleanswers>
+  <subquestion format="html">
+    <text><![CDATA[<p>Projekt</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Ein zeitlich begrenztes Vorhaben mit einem definierten Anfang und Ende zur Erzeugung eines einmaligen Produkts.</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Stakeholder</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Person, Gruppe oder Organisation, die von einem Projekt betroffen ist oder ein Interesse daran hat.</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Anforderung</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Eine Bedingung oder Fähigkeit, die von einem System erfüllt werden muss.</p>]]></text>
+    </answer>
+  </subquestion>
+    <subquestion format="html">
+    <text><![CDATA[<p>Requirement-Engineering</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Der systematische Prozess zur Ermittlung, Dokumentation, Validierung und Verwaltung von Anforderungen.</p>]]></text>
+    </answer>
+  </subquestion>
+</question>
+
+<!-- Matching Frage 2 -->
+<question type="matching">
+  <name>
+    <text>Zuordnung: Erhebungstechniken</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Ordnen Sie die Erhebungstechniken den passenden Beschreibungen zu.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Die Wahl der richtigen Erhebungstechnik (Interview, Workshop, Fragebogen, Beobachtung) ist entscheidend, um die Bedürfnisse der Stakeholder korrekt zu ermitteln.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <shuffleanswers>true</shuffleanswers>
+  <subquestion format="html">
+    <text><![CDATA[<p>Interview</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Direktes Gespräch mit einem Stakeholder, um tiefes Wissen zu erhalten.</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Workshop</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Moderiertes Treffen einer Gruppe, um gemeinsam Anforderungen zu erarbeiten und Konsens zu finden.</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Fragebogen</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Standardisierte Sammlung von Fragen, die an eine große Anzahl von Personen verteilt wird.</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Beobachtung</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Der Analyst beobachtet den Benutzer in seiner Arbeitsumgebung, um unausgesprochene Arbeitsschritte aufzudecken.</p>]]></text>
+    </answer>
+  </subquestion>
+</question>
+
+<!-- Matching Frage 3 -->
+<question type="matching">
+  <name>
+    <text>Zuordnung: Lastenheft vs. Pflichtenheft</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Ordnen Sie die Begriffe Lastenheft und Pflichtenheft den korrekten Perspektiven und Inhalten zu.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Das Lastenheft beschreibt das "Was" aus Sicht des Auftraggebers. Das Pflichtenheft beschreibt das "Wie" aus Sicht des Auftragnehmers.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <shuffleanswers>true</shuffleanswers>
+  <subquestion format="html">
+    <text><![CDATA[<p>Lastenheft</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Beschreibt die Anforderungen aus Sicht des Auftraggebers ("Was soll das System tun?").</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Pflichtenheft</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Beschreibt die technische Umsetzung aus Sicht des Auftragnehmers ("Wie werden die Anforderungen realisiert?").</p>]]></text>
+    </answer>
+  </subquestion>
+    <subquestion format="html">
+    <text><![CDATA[<p>Perspektive des Kunden</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Lastenheft</p>]]></text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>Perspektive des Entwicklers</p>]]></text>
+    <answer>
+      <text><![CDATA[<p>Pflichtenheft</p>]]></text>
+    </answer>
+  </subquestion>
+</question>
+
+<!-- =================================== -->
+<!-- LÜCKENTEXT (CLOZE) FRAGEN         -->
+<!-- =================================== -->
+
+<!-- Cloze Frage 1 -->
+<question type="cloze">
+  <name>
+    <text>Lückentext: Anforderungsarten</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Anforderungen werden grundsätzlich in zwei Hauptarten unterteilt. Anforderungen, die beschreiben, <strong>was</strong> das System tun soll, nennt man {1:SHORTANSWER:=funktionale Anforderungen}. Anforderungen hingegen, die beschreiben, <strong>wie</strong> das System etwas tun soll (z.B. bezüglich Geschwindigkeit oder Sicherheit), werden als {1:SHORTANSWER:=nicht-funktionale Anforderungen} bezeichnet.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Funktionale Anforderungen definieren die Funktionen (WAS), nicht-funktionale Anforderungen definieren die Qualitätseigenschaften (WIE).</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+</question>
+
+<!-- Cloze Frage 2 -->
+<question type="cloze">
+  <name>
+    <text>Lückentext: User Story Format</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Eine User Story wird typischerweise in einem festen Format formuliert, um den Fokus auf den Nutzerwert zu legen. Das Format lautet: "Als {1:SHORTANSWER:=Rolle} möchte ich {1:SHORTANSWER:=Ziel#oder Wunsch} , um {1:SHORTANSWER:=Nutzen} zu erreichen."</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Das Format "Als &lt;Rolle&gt; möchte ich &lt;Ziel/Wunsch&gt;, um &lt;Nutzen&gt; zu erreichen" ist der Standard für User Stories und hilft dabei, den Geschäftswert jeder Anforderung klar zu definieren.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+</question>
+
+<!-- =================================== -->
+<!-- KURZANTWORT (SHORTANSWER) FRAGE     -->
+<!-- =================================== -->
+<question type="shortanswer">
+  <name>
+    <text>Kurzantwort: Hauptziel Requirementmanagement</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Nennen Sie eines der vier im Skript genannten Hauptziele des Requirementmanagements.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>Die vier Hauptziele sind: 1. Verständnis schaffen, 2. Grundlage für die Planung legen, 3. Fehlentwicklungen vermeiden, 4. Veränderungen kontrollieren.</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <usecase>0</usecase>
+  <answer fraction="100" format="html">
+    <text>Verständnis schaffen</text>
+    <feedback format="html">
+      <text><![CDATA[<p>Richtig. Sicherstellen, dass alle Stakeholder das Gleiche verstehen, ist ein Hauptziel.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="100" format="html">
+    <text>Grundlage für die Planung legen</text>
+    <feedback format="html">
+      <text><![CDATA[<p>Richtig. Anforderungen sind die Basis für jede realistische Projektplanung.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="100" format="html">
+    <text>Fehlentwicklungen vermeiden</text>
+    <feedback format="html">
+      <text><![CDATA[<p>Richtig. Frühes Erkennen von Fehlern in den Anforderungen spart enorme Kosten.</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="100" format="html">
+    <text>Veränderungen kontrollieren</text>
+    <feedback format="html">
+      <text><![CDATA[<p>Richtig. Ein strukturierter Prozess für Änderungen verhindert Chaos im Projekt.</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+</quiz>

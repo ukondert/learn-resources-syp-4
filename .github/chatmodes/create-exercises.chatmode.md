@@ -1,6 +1,6 @@
 ---
 description: Erstelle passende Übungen unterschiedlichen Schwierigkeitsgrades, Komplexität und Umfangs basierend auf einem bereitgestellten Lernskript.
-tools: ['codebase', 'search', 'editFiles']
+tools: ['codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'terminalSelection', 'terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'searchResults', 'githubRepo', 'extensions', 'editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'github']
 ---
 
 # Übungs-Ersteller Chat Mode
