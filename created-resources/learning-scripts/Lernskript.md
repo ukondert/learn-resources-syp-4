@@ -46,9 +46,17 @@
     - [4.3.1. Der Ablauf des Sprint Plannings](#431-der-ablauf-des-sprint-plannings)
     - [4.3.2. Schätzung des Aufwands: Story Points und Planning Poker](#432-schätzung-des-aufwands-story-points-und-planning-poker)
     - [4.3.3. Der Einfluss der Systemarchitektur auf die Sprint-Planung](#433-der-einfluss-der-systemarchitektur-auf-die-sprint-planung)
-- [5. Kapitel: Systementwurf und Architektur](#5-kapitel-systementwurf-und-architektur)
-  - [5.1. Technische Architekturmuster](#51-technische-architekturmuster)
-  - [5.2. Schnittstellenspezifikation (API-Design)](#52-schnittstellenspezifikation-api-design)
+- [5. Kapitel: Software Architektur und Entwurf](#5-kapitel-software-architektur-und-entwurf)
+  - [5.1. Technische Architekturmuster im Überblick](#51-technische-architekturmuster-im-überblick)
+    - [5.1.1. Der Einfluss der Projektmethode auf die Architektur](#511-der-einfluss-der-projektmethode-auf-die-architektur)
+    - [5.1.2. Architekturmuster im Kontext der Projektmethodik](#512-architekturmuster-im-kontext-der-projektmethodik)
+    - [5.1.3. Fazit](#513-fazit)
+  - [5.2. Ausgewählte SW-Architekturen im Detail](#52-ausgewählte-sw-architekturen-im-detail)
+    - [5.2.1. Die Clean Architecture](#521-die-clean-architecture)
+  - [5.2. Systementwurf und API-Design: Vom Architektur-Blueprint zur iterativen Umsetzung](#52-systementwurf-und-api-design-vom-architektur-blueprint-zur-iterativen-umsetzung)
+    - [5.2.1. Die Rolle des API-Designs im agilen Prozess](#521-die-rolle-des-api-designs-im-agilen-prozess)
+    - [5.2.2. API-First-Ansatz: Die Schnittstelle als Vertrag](#522-api-first-ansatz-die-schnittstelle-als-vertrag)
+    - [5.2.3. Praktischer Leitfaden: API-Design in einem Sprint](#523-praktischer-leitfaden-api-design-in-einem-sprint)
 - [6. Kapitel: Prototyping und Validierung](#6-kapitel-prototyping-und-validierung)
   - [6.1. Interaktive Prototypen](#61-interaktive-prototypen)
   - [6.2. Durchführung von Nutzertests](#62-durchführung-von-nutzertests)
@@ -1091,15 +1099,364 @@ Stellen Sie sich vor, Sie planen den Innenausbau eines Raumes. Ihre Planung hän
 
 > <span style="font-size: 1.5em">:warning:</span> **Achtung:** In der agilen Welt wird Architektur oft als **"emergent"** (entstehend) betrachtet. Man entwirft nicht die gesamte Architektur für Jahre im Voraus, sondern beginnt mit einer minimalen, aber soliden Basis ("Walking Skeleton") und lässt sie mit jeder Iteration wachsen. Dennoch müssen grundlegende Architekturentscheidungen früh getroffen werden, da sie weitreichende Folgen haben. **Wie man solche Architekturen entwirft und welche Muster es gibt, wird detailliert im nachfolgenden Kapitel 5 "Systementwurf und Architektur" behandelt.**
 
-# 5. Kapitel: Systementwurf und Architektur
+# 5. Kapitel: Software Architektur und Entwurf 
 
-Nachdem wir wissen, *was* gebaut werden soll, klären wir hier, *wie* es gebaut wird. Dieses Kapitel wechselt von der Anwender- zur technischen Perspektive und legt den Grundstein für eine robuste und wartbare Software.
+## 5.1. Technische Architekturmuster im Überblick
 
-## 5.1. Technische Architekturmuster
-Wir untersuchen bewährte Lösungsansätze für wiederkehrende Entwurfsprobleme, wie z.B. das Model-View-Controller (MVC) Muster oder eine einfache Schichtenarchitektur.
+Stellen Sie sich vor, Sie sind der Architekt eines Wolkenkratzers. Bevor der erste Bagger anrollt, benötigen Sie einen detaillierten Bauplan. Dieser Plan legt nicht nur die Anordnung der Räume fest, sondern auch das Fundament, die tragenden Strukturen, die Elektrik und die Wasserversorgung. Ohne diesen Plan würde das Gebäude wahrscheinlich einstürzen oder zumindest unbrauchbar sein.
 
-## 5.2. Schnittstellenspezifikation (API-Design)
-Hier lernen wir, wie man Schnittstellen (APIs) klar definiert, damit verschiedene Teile eines Systems (oder verschiedene Systeme) miteinander kommunizieren können.
+In der Softwareentwicklung ist die **Softwarearchitektur** dieser Bauplan. Sie definiert die grundlegende Struktur eines Systems, die Komponenten, aus denen es besteht, deren Beziehungen zueinander und die Prinzipien, die ihr Design und ihre Entwicklung leiten. Eine gute Architektur ist die Grundlage für ein robustes, wartbares und skalierbares System.
+
+### 5.1.1. Der Einfluss der Projektmethode auf die Architektur
+
+Die Wahl der Projektmanagementmethode hat einen erheblichen Einfluss darauf, wie die Softwarearchitektur entsteht und sich entwickelt. Die grundlegende Frage ist: Wird die Architektur im Voraus bis ins Detail geplant oder darf sie sich im Laufe des Projekts entwickeln?
+
+#### Traditioneller Ansatz: Big Design Upfront (BDUF)
+Beim **Wasserfallmodell** wird versucht, die gesamte Architektur im Voraus zu entwerfen. Man erstellt einen umfassenden, detaillierten Bauplan, bevor die erste Zeile Code geschrieben wird.
+- **Vorteil:** Alle Beteiligten haben von Anfang an ein klares Bild vom Gesamtsystem.
+- **Nachteil:** Dieser Ansatz ist sehr starr. Fehler im initialen Design werden oft erst spät entdeckt und sind dann extrem teuer zu beheben. Er funktioniert nur gut, wenn die Anforderungen von Anfang an vollständig bekannt und stabil sind.
+
+#### Agiler Ansatz: Evolutionäre Architektur & Walking Skeleton
+In agilen Projekten wie mit **Scrum** entwickelt sich die Architektur iterativ mit dem Produkt. Man startet nicht mit einem perfekten, vollständigen Plan, sondern mit einer grundlegenden, aber funktionierenden Struktur.
+
+Ein zentrales Konzept hierbei ist der **"Walking Skeleton"** (gehendes Skelett). Dies ist eine minimale, aber lauffähige End-to-End-Implementierung des Systems, die beweist, dass alle Architekturschichten (z.B. Frontend, Backend, Datenbank) korrekt miteinander verbunden sind. In den folgenden Sprints wird diesem Skelett dann "Fleisch auf die Knochen" gegeben, indem nach und nach Funktionalität hinzugefügt wird.
+
+Dieser evolutionäre Ansatz ermöglicht es dem Team, frühzeitig technisches Feedback zu erhalten und die Architektur bei Bedarf anzupassen, ohne ein riesiges, im Voraus geplantes Design über den Haufen werfen zu müssen.
+
+### 5.1.2. Architekturmuster im Kontext der Projektmethodik
+
+Architekturmuster sind bewährte Lösungsansätze für wiederkehrende Entwurfsprobleme. Ihre Eignung und Anwendung hängen stark von der gewählten Projektmethode ab.
+
+---
+
+#### 1. Layered Architecture (Schichtenarchitektur)
+- **Grundprinzip:** Trennung des Systems in horizontale Schichten (z.B. Präsentation, Geschäftslogik, Datenzugriff).
+- **Einfluss der Methode:**
+    - **Traditionell:** Dieses Muster ist der Klassiker für den Wasserfall-Ansatz. Die Schichten können nacheinander entworfen und spezifiziert werden. Der detaillierte Plan gibt klare Grenzen vor.
+    - **Agil:** Auch hier ist das Muster anwendbar, aber die Umsetzung ist anders. Der "Walking Skeleton" implementiert von Anfang an einen schmalen Pfad durch *alle* Schichten. In jedem Sprint wird dann eine vertikale Funktionalität über alle Schichten hinweg erweitert. Die Gefahr im agilen Kontext ist, dass die strikte Schichtentrennung die schnelle Entwicklung von Features behindern kann.
+
+---
+
+#### 2. Hexagonal Architecture (Ports & Adapter)
+- **Grundprinzip:** Die Kernlogik der Anwendung wird von der Außenwelt (UI, Datenbank) durch "Ports" (Schnittstellen) und "Adapter" (Implementierungen) entkoppelt.
+- **Einfluss der Methode:**
+    - **Traditionell:** Weniger geeignet. Der Versuch, alle denkbaren Ports und Adapter im Voraus zu definieren, ist spekulativ und starr.
+    - **Agil:** Eine perfekte Ergänzung zur agilen Philosophie. Die Kernlogik kann unabhängig entwickelt und getestet werden. Adapter für die Infrastruktur (Datenbank, externe APIs) können hinzugefügt oder ausgetauscht werden, wenn sie benötigt werden. Dies unterstützt eine evolutionäre Entwicklung und schützt den Kern vor sich ändernden Technologien.
+
+---
+
+#### 3. Microkernel Architecture (Plugin-Architektur)
+- **Grundprinzip:** Ein schlanker Kern stellt Basisfunktionen bereit, während Erweiterungen als "Plugins" angebunden werden.
+- **Einfluss der Methode:**
+    - **Traditionell:** Der Kern und die Plugin-Schnittstellen müssen sehr detailliert im Voraus geplant werden, was die spätere Flexibilität einschränken kann.
+    - **Agil:** Sehr gut geeignet. Der Kern kann als Minimum Viable Product (MVP) entwickelt werden. Neue Features oder ganze Funktionsbereiche können als unabhängige Plugins in späteren Sprints entwickelt und ausgeliefert werden. Dies ermöglicht eine hohe Anpassbarkeit und parallele Entwicklung.
+
+---
+
+#### 4. Event-Driven Architecture
+- **Grundprinzip:** Komponenten kommunizieren asynchron über das Austauschen von Ereignissen (Events).
+- **Einfluss der Methode:**
+    - **Traditionell:** Extrem schwierig umzusetzen. Das komplexe Zusammenspiel und die asynchrone Natur aller Komponenten im Voraus zu planen, ist fast unmöglich und sehr fehleranfällig.
+    - **Agil:** Passt hervorragend. Neue Services, die auf Events reagieren, können nach und nach zum System hinzugefügt werden. Die lose Kopplung erlaubt es Teams, unabhängig voneinander an verschiedenen Funktionalitäten zu arbeiten, die durch dieselben Events ausgelöst werden. Dies fördert die Skalierbarkeit und Resilienz des Systems evolutionär wachsen zu lassen.
+
+---
+
+#### 5. Service-Oriented Architecture (SOA) & Microservices
+- **Grundprinzip:** Das System wird in eine Sammlung unabhängiger Services zerlegt.
+- **Einfluss der Methode:**
+    - **Traditionell (SOA):** Die klassische SOA wurde oft mit einem BDUF-Ansatz geplant, was zu schwerfälligen, zentral gesteuerten Projekten führte.
+    - **Agil (Microservices):** Die Microservice-Architektur ist die logische Konsequenz der agilen Philosophie. Jedes Team kann seinen Service autonom entwickeln, testen, deployen und skalieren. Dies ermöglicht eine extrem hohe Entwicklungsgeschwindigkeit und passt perfekt zu iterativen Zyklen und der DevOps-Kultur.
+
+---
+
+#### 6. Clean Architecture
+- **Grundprinzip:** Ein strenges Schichtenmodell, das die Geschäftslogik (Entities, Use Cases) in den innersten Kern legt, komplett isoliert von äußeren Einflüssen wie UI, Datenbanken oder Frameworks. Die zentrale Regel ist die **Dependency Rule**: Abhängigkeiten dürfen immer nur von außen nach innen zeigen.
+- **Einfluss der Methode:**
+    - **Traditionell:** Theoretisch anwendbar, aber der BDUF-Ansatz würde erfordern, alle Schichten und ihre Interaktionen im Voraus zu definieren. Dies widerspricht der Flexibilität, die die Clean Architecture eigentlich bieten soll.
+    - **Agil:** Dies ist das Parademuster für eine evolutionäre, testgetriebene und agile Entwicklung. Der Kern (die Geschäftsregeln) kann entwickelt und getestet werden, bevor überhaupt eine Entscheidung über das UI-Framework oder die Datenbank gefallen ist. Dies maximiert die Agilität, da die teuersten und flüchtigsten Entscheidungen (Technologieauswahl) so lange wie möglich aufgeschoben werden können.
+
+---
+
+> <span style="font-size: 1.5em">:mag:</span> **Vertiefung: Clean, Onion & Modular Architecture**
+> Diese Muster (Clean/Onion als Varianten der Hexagonal Architecture und die Modular Architecture) teilen ein gemeinsames Ziel: **starke Entkopplung und hohe Kohäsion**. Sie sind prädestiniert für **agile Vorgehensweisen**, weil sie es erlauben, das System in unabhängige, testbare und separat entwickelbare Teile zu zerlegen. Die Kernlogik wird vor Änderungen in der volatilen Außenwelt (Technologie, Infrastruktur) geschützt, was eine nachhaltige und evolutionäre Entwicklung erst ermöglicht. In einem traditionellen Modell wäre der Versuch, all diese Module und ihre Schnittstellen perfekt im Voraus zu definieren, eine enorme und oft vergebliche Anstrengung.
+
+### 5.1.3. Fazit
+
+Die Wahl der Architektur ist keine rein technische Entscheidung. Sie ist eng mit den Zielen des Projekts und der Arbeitsweise des Teams verknüpft. **Agile Methoden begünstigen evolutionäre Architekturen**, die mit den Anforderungen wachsen können (z.B. Microservices, Hexagonal Architecture). **Traditionelle Methoden erfordern oft Architekturen, die im Voraus planbar sind** (z.B. eine klassische Schichtenarchitektur). Das Wissen um diese Wechselwirkungen hilft Ihnen, eine bewusste und fundierte Entscheidung für Ihr Projekt zu treffen.
+
+## 5.2. Ausgewählte SW-Architekturen im Detail
+
+Nachdem wir die wichtigsten Architekturmuster im Überblick kennengelernt haben, wollen wir uns nun einige der einflussreichsten Muster im Detail ansehen. Wir beginnen mit der Clean Architecture, da sie viele der Prinzipien verkörpert, die für eine moderne, agile und wartbare Softwareentwicklung entscheidend sind.
+
+### 5.2.1. Die Clean Architecture
+
+Die Clean Architecture, populär gemacht durch Robert C. Martin ("Uncle Bob"), ist kein konkretes Framework, sondern ein Bauplan für eine testbare, UI-unabhängige, datenbankunabhängige und wartbare Systemarchitektur. Ihr oberstes Ziel ist die **Trennung der Belange (Separation of Concerns)** durch eine strikte Schichtung.
+
+Das zentrale visuelle Modell sind konzentrische Kreise, die die verschiedenen Software-Schichten repräsentieren. Die wichtigste Regel lautet: **Die Abhängigkeitsregel (The Dependency Rule)**.
+
+> <span style="font-size: 1.5em">:bulb:</span> **Die Abhängigkeitsregel:** Quellcode-Abhängigkeiten dürfen immer nur von außen nach innen zeigen. Nichts in einer inneren Schicht darf etwas über eine äußere Schicht wissen. Insbesondere darf der Name einer äußeren Schicht nicht in einer inneren Schicht erwähnt werden.
+
+![Clean Architecture Diagram](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
+*Quelle: blog.cleancoder.com*
+
+#### Die Schichten im Detail
+
+1.  **Entities (Entitäten):**
+    -   **Inhalt:** Die Kern-Geschäftsobjekte der Anwendung (z.B. `User`, `Order`, `Product`). Sie enthalten die unternehmensweiten, kritischen Geschäftsregeln.
+    -   **Abhängigkeiten:** Diese Schicht ist komplett unabhängig. Sie weiß nichts von Datenbanken, UIs oder anderen Schichten.
+    -   **Beispiel:** Eine `Order`-Klasse mit Methoden wie `calculateTotalPrice()` oder `validateOrder()`.
+
+2.  **Use Cases (Anwendungsfälle):**
+    -   **Inhalt:** Die anwendungsspezifischen Geschäftsregeln. Sie orchestrieren den Datenfluss zu und von den Entities, um einen bestimmten Anwendungsfall zu erfüllen (z.B. `CreateUserUseCase`, `PlaceOrderUseCase`).
+    -   **Abhängigkeiten:** Hängen nur von den Entities ab. Sie wissen nicht, wer oder was sie auslöst (kein Wissen über UI) oder wie die Daten gespeichert werden (kein Wissen über Datenbanken). Sie kommunizieren mit äußeren Schichten ausschließlich über **Schnittstellen (Ports)**.
+
+3.  **Interface Adapters (Schnittstellen-Adapter):**
+    -   **Inhalt:** Diese Schicht ist eine Menge von Adaptern, die Daten aus dem für die Use Cases und Entities bequemsten Format in das für externe Agenturen (wie die Datenbank oder das Web) bequemste Format umwandeln.
+    -   **Beispiele:**
+        -   **Presenter / Views / Controller (MVC):** Nehmen UI-Eingaben entgegen, rufen den passenden Use Case auf und präsentieren das Ergebnis.
+        -   **Repositories:** Implementieren die von den Use Cases definierten Datenspeicher-Schnittstellen und übersetzen die Anfragen für eine konkrete Datenbank (z.B. SQL).
+
+4.  **Frameworks & Drivers (Frameworks & Treiber):**
+    -   **Inhalt:** Die äußerste Schicht. Hier befinden sich alle externen Details: das Web-Framework (z.B. Spring Boot, ASP.NET), die Datenbank (z.B. PostgreSQL), die UI-Frameworks (z.B. React, Angular), etc.
+    -   **Abhängigkeiten:** Hier steckt der "Klebstoff", der alles zusammenhält. Diese Schicht hängt von allen inneren Schichten ab.
+
+#### Template für eine Projektstruktur (Java mit Maven)
+
+Eine typische Ordnerstruktur für ein Java-Projekt, das Clean Architecture verwendet und mit einem Build-Tool wie Maven oder Gradle verwaltet wird, könnte wie folgt aussehen. Jede Schicht wird oft als separates Modul oder Package innerhalb der `src/main/java` Struktur abgebildet.
+
+```
+mein-projekt/
+├── pom.xml                 # Maven Build-Konfiguration
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── mein-unternehmen/
+        │           └── mein-projekt/
+        │               ├── domain/                   # Domain Layer (Entities + Use Cases)
+        │               │   ├── entities/
+        │               │   │   └── User.java
+        │               │   └── usecases/
+        │               │       ├── CreateUserUseCase.java
+        │               │       └── GetUserUseCase.java
+        │               │   └── ports/
+        │               │       └── UserRepositoryPort.java      // Interface
+        │               │
+        │               ├── application/            # Application Layer (optional, oft in infra)
+        │               │   └── services/
+        │               │       └── UserService.java           // Implementiert Use Cases
+        │               │
+        │               ├── infrastructure/         # Infrastructure Layer
+        │               │   ├── adapters/
+        │               │   │   ├── web/
+        │               │   │   │   └── UserController.java      # REST-Controller
+        │               │   │   └── persistence/
+        │               │   │       └── UserRepositoryImpl.java  # Datenbank-Implementierung
+        │               │   └── config/
+        │               │       └── DependencyInjectionConfig.java
+        │               │
+        │               └── MainApplication.java    # Frameworks & Drivers Layer
+        │
+        └── resources/
+            └── application.properties  # Konfigurationsdateien
+```
+
+**Erläuterung der Struktur:**
+
+- **`domain`**: Der unabhängige Kern.
+  - `entities`: Die reinen Geschäftsobjekte (`User`). Keine externen Abhängigkeiten.
+  - `usecases`: Die anwendungsspezifischen Geschäftsregeln (`CreateUserUseCase`).
+  - `ports`: Die Schnittstellen (`UserRepositoryPort`), die von der Infrastrukturschicht implementiert werden müssen.
+- **`application`**: Diese Schicht kann die Use-Case-Interfaces implementieren und dient als Vermittler. In kleineren Projekten werden ihre Aufgaben oft direkt von den Adaptern in der Infrastruktur übernommen.
+- **`infrastructure`**: Konkrete Implementierungen für externe Abhängigkeiten.
+  - `adapters/web`: Adapter, die die Anwendung von außen ansteuern (z.B. REST-Controller).
+  - `adapters/persistence`: Adapter, die von der Anwendung gesteuert werden (z.B. Datenbank-Repositories, die die `ports` implementieren).
+  - `config`: Konfiguration für Dependency Injection, Datenbankverbindungen etc.
+- **`MainApplication.java`**: Der Einstiegspunkt der Anwendung (Frameworks & Drivers). Hier wird das Framework (z.B. Spring Boot) initialisiert, die Anwendung gestartet und die Abhängigkeiten werden "verdrahtet".
+
+> <span style="font-size: 1.5em">:bulb:</span> Diese Struktur erzwingt die **Dependency Rule**: Abhängigkeiten zeigen immer nach innen, von den konkreten Implementierungen (`infrastructure`) hin zu den abstrakten Regeln (`domain`).
+
+## 5.2. Systementwurf und API-Design: Vom Architektur-Blueprint zur iterativen Umsetzung
+
+Nachdem wir uns im vorherigen Kapitel für eine grundlegende **Software-Architektur** (z.B. Clean Architecture) entschieden haben, beginnt der nächste entscheidende Schritt: der **Systementwurf**. Hier übersetzen wir den abstrakten Architektur-Blueprint in einen konkreten Bauplan für die Entwicklung. Ein zentraler Teil dieses Entwurfs ist die **Schnittstellenspezifikation**, auch bekannt als **API-Design** (Application Programming Interface).
+
+Stellen Sie sich vor, die Software-Architektur ist die Entscheidung, ein Haus als "offenen Bungalow" zu bauen. Der Systementwurf legt nun fest, wo genau die Zimmer liegen, wie sie verbunden sind und wo sich Türen und Fenster (die Schnittstellen) befinden. Das API-Design beschreibt dann detailliert, wie diese Türen und Fenster aussehen, wie sie sich öffnen lassen und was man dahinter findet.
+
+Dieses Kapitel dient als praktische Anleitung, wie Sie nach der Architekturwahl den Systementwurf in einem **iterativen, agilen Prozess** (z.B. in Sprints) gestalten und umsetzen können.
+
+### 5.2.1. Die Rolle des API-Designs im agilen Prozess
+
+In einem agilen Umfeld entwerfen wir nicht die gesamte API für das ganze Projekt im Voraus. Das wäre ein Widerspruch zu den agilen Prinzipien. Stattdessen entwerfen und implementieren wir die API **iterativ und inkrementell**, Sprint für Sprint, basierend auf den User Stories, die den höchsten Wert für den Kunden liefern.
+
+**Der typische Ablauf pro Sprint sieht so aus:**
+
+1.  **Sprint-Planung:** Das Team wählt User Stories aus dem Product Backlog aus (z.B. "Als Kunde möchte ich mich registrieren können").
+2.  **Design-Phase (Mini-Wasserfall im Sprint):**
+    *   **Analyse:** Welche Daten werden benötigt? Welche Aktionen muss der Benutzer durchführen?
+    *   **API-Entwurf:** Das Team entwirft den spezifischen API-Endpunkt, der für diese User Story benötigt wird (z.B. `POST /api/users/register`).
+    *   **Modell-Entwurf:** Welche Datenstrukturen (Entities, DTOs) sind in den verschiedenen Schichten der Architektur (Domain, Application, Infrastructure) notwendig?
+3.  **Implementierungs-Phase:** Das Team implementiert den Endpunkt und die dazugehörige Logik gemäß der gewählten Architektur.
+4.  **Test-Phase:** Der neue Endpunkt wird getestet (Unit-, Integrations-, E2E-Tests).
+5.  **Sprint-Review:** Die fertige Funktionalität (inkl. des neuen API-Endpunkts) wird dem Product Owner und den Stakeholdern präsentiert.
+
+Dieser Zyklus wiederholt sich in jedem Sprint, sodass die API organisch mit dem Produkt wächst.
+
+### 5.2.2. API-First-Ansatz: Die Schnittstelle als Vertrag
+
+Ein bewährter Ansatz im modernen API-Design ist **"API-First"**. Das bedeutet, die API wird entworfen und definiert, *bevor* die eigentliche Implementierung beginnt. Diese Definition dient als **Vertrag** zwischen verschiedenen Teilen des Systems (z.B. Frontend und Backend) oder sogar zwischen verschiedenen Teams.
+
+**Vorteile des API-First-Ansatzes:**
+
+-   **Parallelisierung der Arbeit:** Sobald der Vertrag (die API-Spezifikation) steht, kann das Frontend-Team beginnen, gegen einen "Mock" (eine Simulation) der API zu entwickeln, während das Backend-Team die Logik implementiert.
+-   **Klarheit und frühes Feedback:** Die Diskussion über die API zwingt alle Beteiligten, frühzeitig über Datenmodelle und Prozesse nachzudenken. Unklarheiten werden aufgedeckt, bevor eine einzige Zeile Code geschrieben wurde.
+-   **Bessere API-Qualität:** Da die API im Fokus steht, wird sie oft durchdachter, konsistenter und benutzerfreundlicher (für die Entwickler, die sie nutzen).
+
+### 5.2.3. Praktischer Leitfaden: API-Design in einem Sprint
+
+Nehmen wir ein konkretes Beispiel: Wir arbeiten an einer Projektmanagement-App und haben uns für die **Clean Architecture** entschieden. Im aktuellen Sprint wollen wir die folgende User Story umsetzen:
+
+> **User Story:** "Als Projektmanager möchte ich ein neues Projekt erstellen können, damit ich Aufgaben dafür planen kann."
+
+#### Schritt 1: Identifikation der Aktion und des Endpunkts
+
+-   **Aktion:** Ein neues Projekt wird erstellt. In der Welt der Web-APIs entspricht das einer `POST`-Anfrage.
+-   **Ressource:** Die Ressource, mit der wir arbeiten, ist ein "Projekt". Die Sammlung aller Projekte liegt üblicherweise unter einem Pfad wie `/api/projects`.
+-   **Ergebnis (Endpunkt):** `POST /api/projects`
+
+#### Schritt 2: Definition des Datenmodells (Request & Response)
+
+Was müssen wir dem System geben, um ein Projekt zu erstellen? Was bekommen wir zurück?
+
+-   **Request Body (Was wir hinschicken):**
+    -   `name` (string, erforderlich): Der Name des neuen Projekts.
+    -   `description` (string, optional): Eine kurze Beschreibung.
+    -   `startDate` (date, optional): Das geplante Startdatum.
+-   **Response Body (Was wir zurückbekommen):**
+    -   Bei Erfolg (HTTP-Status `201 Created`): Das vollständig erstellte Projekt-Objekt, inklusive der vom System generierten ID.
+        -   `id` (string/uuid): Die einzigartige ID des neuen Projekts.
+        -   `name` (string): Der Name des Projekts.
+        -   `description` (string): Die Beschreibung.
+        -   `startDate` (date): Das Startdatum.
+        -   `createdAt` (datetime): Der Zeitstempel der Erstellung.
+
+#### Schritt 3: Entwurf der Architektur-Komponenten (Clean Architecture)
+
+Jetzt mappen wir den API-Entwurf auf unsere gewählten Architektur-Schichten.
+
+1.  **Domain Layer (Der Kern):**
+    -   **Entity:** Wir definieren eine `Project`-Klasse. Sie enthält die reinen Geschäftsdaten und -regeln.
+      ```java
+      // src/domain/entities/Project.java
+      public class Project {
+          private String id;
+          private String name;
+          private String description;
+          // ... Getter, Setter, Geschäftslogik ...
+      }
+      ```
+    -   **Use Case / Port:** Wir definieren einen Anwendungsfall und die notwendigen Schnittstellen.
+      ```java
+      // src/domain/usecases/CreateProjectUseCase.java
+      public interface CreateProjectUseCase {
+          Project handle(CreateProjectCommand command);
+      }
+
+      // src/domain/ports/ProjectRepositoryPort.java
+      public interface ProjectRepositoryPort {
+          Project save(Project project);
+      }
+      ```
+
+2.  **Infrastructure Layer (Die Adapter):**
+    -   **Controller (Web Adapter):** Nimmt die HTTP-Anfrage entgegen, wandelt sie in einen Befehl um und ruft den Use Case auf.
+      ```java
+      // src/infrastructure/web/ProjectController.java
+      @RestController
+      public class ProjectController {
+          private final CreateProjectUseCase createProjectUseCase;
+          // ...
+          @PostMapping("/api/projects")
+          public ResponseEntity<ProjectDTO> createProject(@RequestBody CreateProjectDTO dto) {
+              // DTO in Command umwandeln und Use Case aufrufen
+              // ...
+          }
+      }
+      ```
+    -   **Repository (Persistence Adapter):** Implementiert den `ProjectRepositoryPort` und kümmert sich um das Speichern in der Datenbank.
+      ```java
+      // src/infrastructure/persistence/ProjectRepositoryImpl.java
+      public class ProjectRepositoryImpl implements ProjectRepositoryPort {
+          // ... Datenbanklogik ...
+          @Override
+          public Project save(Project project) {
+              // ... speichert das Projekt in der DB und gibt es zurück ...
+          }
+      }
+      ```
+
+3.  **Application Layer (Die Verbindung):**
+    -   **Use Case Implementierung:** Implementiert das `CreateProjectUseCase`-Interface und orchestriert die Logik.
+      ```java
+      // src/application/CreateProjectService.java
+      public class CreateProjectService implements CreateProjectUseCase {
+          private final ProjectRepositoryPort projectRepository;
+          // ...
+          @Override
+          public Project handle(CreateProjectCommand command) {
+              Project project = new Project(command.getName(), ...);
+              return projectRepository.save(project);
+          }
+      }
+      ```
+
+#### Schritt 4: Dokumentation der API (Der Vertrag)
+
+Der entworfene Endpunkt wird nun formal dokumentiert. Dies kann mit Werkzeugen wie **Swagger/OpenAPI** geschehen. Diese Spezifikation ist der "Vertrag" für alle Entwickler.
+
+**Beispiel (OpenAPI 3.0 in YAML):**
+```yaml
+openapi: 3.0.0
+info:
+  title: Projektmanagement API
+  version: 1.0.0
+paths:
+  /api/projects:
+    post:
+      summary: Erstellt ein neues Projekt
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateProjectRequest'
+      responses:
+        '201':
+          description: Projekt erfolgreich erstellt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectResponse'
+components:
+  schemas:
+    CreateProjectRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+    ProjectResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        # ... weitere Felder
+```
+
+Mit diesem detaillierten, iterativen Vorgehen stellen Sie sicher, dass Ihr Systementwurf und Ihr API-Design Hand in Hand mit den agilen Prinzipien gehen und eine robuste, wartbare und gut dokumentierte Anwendung entsteht.
 
 <div style="page-break-after: always;"></div>
 
