@@ -18,6 +18,8 @@
   - [2.1. Definition zentraler Begriffe im Projekt- und Anforderungsmanagement](#21-definition-zentraler-begriffe-im-projekt--und-anforderungsmanagement)
   - [2.2. Historischer Kontext und Entwicklung der Methoden](#22-historischer-kontext-und-entwicklung-der-methoden)
   - [2.3. Vergleich verwandter Ansätze und Querverbindungen](#23-vergleich-verwandter-ansätze-und-querverbindungen)
+  - [2.4. Wahl der richtigen Methode: Agil vs. Traditionell](#24-wahl-der-richtigen-methode-agil-vs-traditionell)
+    - [2.4.1. Beispielszenarien](#241-beispielszenarien)
 - [3. Kapitel: Requirementmanagement](#3-kapitel-requirementmanagement)
   - [3.1. Einführung in das Requirementmanagement](#31-einführung-in-das-requirementmanagement)
   - [3.2. Methoden der Anforderungserhebung und -beschreibung](#32-methoden-der-anforderungserhebung-und--beschreibung)
@@ -30,26 +32,30 @@
     - [3.3.3. Bauen, Testen, Lernen: Prototyping \& Iteration](#333-bauen-testen-lernen-prototyping--iteration)
   - [3.4. Der Prozess der benutzerorientierten Konzeptentwicklung](#34-der-prozess-der-benutzerorientierten-konzeptentwicklung)
     - [3.4.1. Einordnung in Vorgehensmodelle](#341-einordnung-in-vorgehensmodelle)
-  - [3.4. Tools und Dokumentationsstrategien](#34-tools-und-dokumentationsstrategien)
-    - [3.3.1. Werkzeuge (Tools)](#331-werkzeuge-tools)
-    - [3.3.2. Dokumentationsstrategien](#332-dokumentationsstrategien)
-- [4. Kapitel: Projektmanagement](#4-kapitel-projektmanagement)
-  - [4.1. Grundlagen des Projektmanagements](#41-grundlagen-des-projektmanagements)
-  - [4.2. Requirement-Engineering im Projektmanagement](#42-requirement-engineering-im-projektmanagement)
-  - [4.3. Testmanagement](#43-testmanagement)
-  - [4.4. Change-Management](#44-change-management)
-  - [4.5. Aktuelle Vorgehensweisen und Best Practices](#45-aktuelle-vorgehensweisen-und-best-practices)
-  - [4.6. Puffer und Leistungsüberprüfung](#46-puffer-und-leistungsüberprüfung)
-- [5. Kapitel: Systemkonzeption, Sicherheit und IT-Recht](#5-kapitel-systemkonzeption-sicherheit-und-it-recht)
-  - [5.1. Grundlagen der Systemkonzeption](#51-grundlagen-der-systemkonzeption)
-  - [5.2. Aktuelle Technologien und betriebliche Informationssysteme](#52-aktuelle-technologien-und-betriebliche-informationssysteme)
-  - [5.3. Prozessmodelle, Rollen und Methoden im Software Engineering](#53-prozessmodelle-rollen-und-methoden-im-software-engineering)
-  - [5.4. Ist-Erhebung, Analyse, Entwurf und Qualitätssicherung](#54-ist-erhebung-analyse-entwurf-und-qualitätssicherung)
-  - [5.5. Qualitätsmanagement, Produktdokumentation und Wartung](#55-qualitätsmanagement-produktdokumentation-und-wartung)
-  - [5.6. Zusätzliche Themen/Puffer](#56-zusätzliche-themenpuffer)
-- [6. Zusammenfassung und Ausblick](#6-zusammenfassung-und-ausblick)
-- [7. Glossar](#7-glossar)
-- [8. Anhang](#8-anhang)
+  - [3.5. Tools und Dokumentationsstrategien](#35-tools-und-dokumentationsstrategien)
+    - [3.5.1. Werkzeuge (Tools)](#351-werkzeuge-tools)
+    - [3.5.2. Dokumentationsstrategien](#352-dokumentationsstrategien)
+- [4. Kapitel: Projektmanagement-Methoden erweitern](#4-kapitel-projektmanagement-methoden-erweitern)
+  - [4.1. Agile Methoden (Scrum, Kanban)](#41-agile-methoden-scrum-kanban)
+    - [4.1.1. Scrum: Das Framework für komplexe Produkte](#411-scrum-das-framework-für-komplexe-produkte)
+    - [4.1.2. Kanban: Der Weg zur kontinuierlichen Verbesserung](#412-kanban-der-weg-zur-kontinuierlichen-verbesserung)
+  - [4.2. Hybride Modelle](#42-hybride-modelle)
+    - [4.2.1. Das Scrumban-Modell: Die Brücke zwischen Scrum und Kanban](#421-das-scrumban-modell-die-brücke-zwischen-scrum-und-kanban)
+    - [4.2.2. Der Scrum-Fall: Agilität im strukturierten Rahmen](#422-der-scrum-fall-agilität-im-strukturierten-rahmen)
+  - [4.3. Planung von Iterationen und Sprints](#43-planung-von-iterationen-und-sprints)
+    - [4.3.1. Der Ablauf des Sprint Plannings](#431-der-ablauf-des-sprint-plannings)
+    - [4.3.2. Schätzung des Aufwands: Story Points und Planning Poker](#432-schätzung-des-aufwands-story-points-und-planning-poker)
+    - [4.3.3. Der Einfluss der Systemarchitektur auf die Sprint-Planung](#433-der-einfluss-der-systemarchitektur-auf-die-sprint-planung)
+- [5. Kapitel: Systementwurf und Architektur](#5-kapitel-systementwurf-und-architektur)
+  - [5.1. Technische Architekturmuster](#51-technische-architekturmuster)
+  - [5.2. Schnittstellenspezifikation (API-Design)](#52-schnittstellenspezifikation-api-design)
+- [6. Kapitel: Prototyping und Validierung](#6-kapitel-prototyping-und-validierung)
+  - [6.1. Interaktive Prototypen](#61-interaktive-prototypen)
+  - [6.2. Durchführung von Nutzertests](#62-durchführung-von-nutzertests)
+- [7. Kapitel: Integration in das Semesterprojekt](#7-kapitel-integration-in-das-semesterprojekt)
+- [8. Zusammenfassung und Ausblick](#8-zusammenfassung-und-ausblick)
+- [9. Glossar](#9-glossar)
+- [10. Anhang](#10-anhang)
 
 <div style="page-break-after: always;"></div>
 
@@ -128,7 +134,7 @@ Diese historische Perspektive hilft uns zu verstehen, warum es heute so viele ve
 
 ## 2.3. Vergleich verwandter Ansätze und Querverbindungen
 
-Nachdem wir die historische Entwicklung betrachtet haben, ist es wichtig, die beiden großen Philosophien im modernen Projektmanagement direkt zu vergleichen: **traditionelle (plan-getriebene) Ansätze** wie das Wasserfallmodell und **agile (veränderungs-getriebene) Ansätze** wie Scrum.
+Nachdem wir die historische Entwicklung betrachtet haben, ist es wichtig, die beiden großen Philosophien im modernen Projektmanagement direkt zu vergleichen: **traditionelle (plan-getriebene) Ansätze** wie das Wasserfallmodell und **agile (veränderungs-getriebenen) Ansätze** wie Scrum.
 
 Stellen Sie es sich wie den Bau eines Hauses vor:
 - **Traditionell (Wasserfall):** Sie erstellen einen detaillierten Bauplan, bevor der erste Spatenstich erfolgt. Jede Wand, jedes Fenster und jede Steckdose ist exakt vorgeplant. Änderungen während des Baus sind extrem teuer und kompliziert.
@@ -149,6 +155,80 @@ Hier ist ein direkter Vergleich der wichtigsten Merkmale:
 > <span style="font-size: 1.5em">:warning:</span> **Achtung:** Kein Ansatz ist per se "besser" als der andere. Die Wahl der richtigen Methode hängt immer vom Projekt, dem Team, dem Kunden und dem Umfeld ab. In der Praxis existieren oft auch **hybride Modelle**, die Elemente aus beiden Welten kombinieren (z.B. [water-scrum-fall-model](https://www.online-projektmanagement.info/agiles-projektmanagement-scrum-methode/scrum-versus-wasserfallmodell/water-scrum-fall/)])
 
 Dieses Verständnis der grundlegenden Unterschiede ist entscheidend, um im Laufe des Jahres die verschiedenen Techniken und Werkzeuge korrekt einordnen zu können.
+
+<div style="page-break-after: always;"></div>
+
+## 2.4. Wahl der richtigen Methode: Agil vs. Traditionell
+
+Wie wir in Kapitel 2.3 gesehen haben, gibt es keinen "besten" Ansatz für alle Projekte. Die Entscheidung zwischen einem traditionellen, plan-getriebenen Vorgehen (wie dem Wasserfallmodell) und einem agilen, veränderungs-getriebenen Ansatz (wie Scrum) ist eine der wichtigsten Weichenstellungen zu Beginn eines Projekts. Die falsche Wahl kann zu Frustration, Verzögerungen und im schlimmsten Fall zum Scheitern des Projekts führen.
+
+Stellen Sie sich vor, Sie planen eine Reise. Wenn das Ziel ein bekanntes, gut erreichbares All-Inclusive-Resort ist, können Sie die gesamte Reise von Flug über Hotel bis zu den Ausflügen im Voraus exakt durchplanen (traditioneller Ansatz). Wenn Sie jedoch mit einem Rucksack durch ein unbekanntes Land reisen, planen Sie vielleicht nur die erste Unterkunft und entscheiden dann spontan und flexibel, wohin es als Nächstes geht (agiler Ansatz).
+
+Um die richtige Entscheidung für Ihr Projekt zu treffen, sollten Sie die folgenden Schlüsselfaktoren bewerten:
+
+| Faktor | Traditionell (Wasserfall) ist besser geeignet, wenn... | Agil (Scrum) ist besser geeignet, wenn... |
+| :--- | :--- | :--- |
+| **Anforderungen** | ...die Anforderungen von Anfang an klar, detailliert und stabil sind. Änderungen sind unwahrscheinlich oder müssen streng kontrolliert werden. | ...die Anforderungen zu Beginn unklar sind, sich wahrscheinlich ändern werden oder erst im Laufe des Projekts entdeckt werden. |
+| **Kunde & Stakeholder** | ...der Kunde eine detaillierte Planung und einen festen Preis zu Beginn wünscht und nur zu definierten Meilensteinen verfügbar ist. | ...der Kunde bereit und in der Lage ist, kontinuierlich und eng mit dem Entwicklungsteam zusammenzuarbeiten und regelmäßig Feedback zu geben. |
+| **Projektumfeld** | ...das Umfeld stabil und vorhersehbar ist. Es gibt wenige externe Abhängigkeiten oder technologische Unsicherheiten. | ...das Projekt in einem dynamischen, sich schnell ändernden Markt stattfindet oder neue, unerprobte Technologien verwendet werden. |
+| **Team & Kultur** | ...das Team an klare Hierarchien und detaillierte Arbeitsanweisungen gewöhnt ist. Die Rollen sind klar getrennt. | ...das Team selbstorganisiert, interdisziplinär und entscheidungsfreudig ist. Eine offene Kommunikations- und Fehlerkultur wird gelebt. |
+| **Risikomanagement** | ...das Hauptrisiko in der Nichteinhaltung des initialen Plans (Zeit, Budget, Umfang) liegt. Das Ziel ist Planerfüllung. | ...das Hauptrisiko darin besteht, am Ende ein Produkt zu liefern, das der Markt nicht will. Das Ziel ist die Maximierung des Kundenwerts. |
+
+> <span style="font-size: 1.5em">:bulb:</span> **Merksatz:** Die Faustregel lautet: Je **unklarer** das Ziel und je **dynamischer** das Umfeld, desto eher eignet sich ein **agiler** Ansatz. Je **klarer** das Ziel und je **stabiler** das Umfeld, desto eher kann ein **traditioneller** Ansatz erfolgreich sein.
+
+In der realen Welt sind die Grenzen oft fließend. Viele Organisationen nutzen daher **hybride Modelle**, die versuchen, das Beste aus beiden Welten zu vereinen – zum Beispiel eine grobe, traditionelle Rahmenplanung für das Gesamtprojekt, aber eine agile Umsetzung der einzelnen Arbeitspakete.
+
+### 2.4.1. Beispielszenarien
+
+Um die Theorie greifbarer zu machen, betrachten wir drei typische Softwareentwicklungsprojekte und analysieren, welcher Ansatz am besten passt.
+
+
+#### Szenario 1: Firmware für ein medizinisches Gerät (z.B. ein Blutzuckermessgerät)
+
+*   **Projektbeschreibung:** Ein Unternehmen entwickelt eine neue Generation von Blutzuckermessgeräten. Die Software (Firmware) auf dem Gerät muss absolut zuverlässig und fehlerfrei funktionieren. Die Anforderungen sind durch medizinische Standards und gesetzliche Vorschriften (z.B. MPG - Medizinproduktegesetz) streng vorgegeben.
+
+*   **Analyse der Faktoren:**
+    *   **Anforderungen:** Extrem stabil und von Anfang an im Detail bekannt. Änderungen sind nach der Zulassung kaum noch möglich.
+    *   **Kunde & Stakeholder:** Die "Kunden" sind Regulierungsbehörden und Patienten. Die Anforderungen sind nicht verhandelbar.
+    *   **Projektumfeld:** Sehr stabil, aber hoch reguliert. Sicherheit und Nachweisbarkeit sind wichtiger als Geschwindigkeit.
+    *   **Risikomanagement:** Das größte Risiko ist ein Softwarefehler, der zu einer falschen Messung und damit zu einer Gesundheitsgefährdung des Patienten führen könnte. Jeder Entwicklungsschritt muss lückenlos dokumentiert und getestet werden.
+
+*   **Empfohlene Methode: Traditionelles Vorgehen (Wasserfallmodell)**
+    *   **Begründung:** Ein sequenzieller Prozess mit klaren Phasen (Analyse, Design, Implementierung, rigorose Tests, Dokumentation) ist hier unerlässlich. Die strengen, unveränderlichen Anforderungen und der Fokus auf Sicherheit und lückenlose Dokumentation machen das Wasserfallmodell zur idealen Wahl. Agilität wäre hier kontraproduktiv und würde die notwendigen Zulassungsprozesse erschweren.
+
+---
+
+#### Szenario 2: Entwicklung einer neuen Social-Media-App für eine junge Zielgruppe
+
+*   **Projektbeschreibung:** Ein Startup möchte eine innovative App entwickeln, die Funktionen von TikTok und Instagram kombiniert, um eine Nische im Markt zu besetzen. Zu Beginn gibt es nur eine grobe Idee, aber kein klares Bild von den finalen Features. Der Erfolg hängt davon ab, wie schnell die App auf Trends und Nutzerfeedback reagieren kann.
+
+*   **Analyse der Faktoren:**
+    *   **Anforderungen:** Sehr unklar und dynamisch. Welche Features bei der Zielgruppe ankommen, muss erst durch Ausprobieren herausgefunden werden.
+    *   **Kunde & Stakeholder:** Die zukünftigen Nutzer sind die wichtigsten Stakeholder. Ihr Feedback ist entscheidend für die Weiterentwicklung.
+    *   **Projektumfeld:** Extrem dynamisch und wettbewerbsintensiv. Geschwindigkeit ("Time-to-Market") ist ein kritischer Erfolgsfaktor.
+    *   **Risikomanagement:** Das größte Risiko ist, eine App zu entwickeln, die niemand nutzt. Das Ziel ist, so schnell wie möglich ein "Minimum Viable Product" (MVP) zu veröffentlichen, um echtes Nutzerfeedback zu sammeln und das Produkt darauf basierend anzupassen.
+
+*   **Empfohlene Methode: Agiles Vorgehen (Scrum)**
+    *   **Begründung:** Scrum ist für dieses Szenario perfekt geeignet. Kurze Sprints (z.B. 2 Wochen) ermöglichen es, schnell neue Funktionen zu entwickeln und zu veröffentlichen. Das Team kann auf Basis von Nutzerdaten und direktem Feedback lernen und den Kurs kontinuierlich anpassen. Die Flexibilität von Scrum erlaubt es, auf neue Trends zu reagieren und den Produktwert für den Nutzer zu maximieren.
+
+---
+
+#### Szenario 3: Digitalisierung eines bestehenden Geschäftsprozesses in einem Großkonzern
+
+*   **Projektbeschreibung:** Ein etabliertes Versicherungsunternehmen möchte seinen papierbasierten Prozess zur Schadensmeldung durch eine moderne Web-Anwendung ersetzen. Der grundlegende Prozess (Schaden melden, Gutachter beauftragen, Auszahlung freigeben) ist klar definiert und muss sich in die bestehende IT-Landschaft (z.B. Kundendatenbank, Buchhaltungssystem) integrieren. Gleichzeitig soll die neue Anwendung aber benutzerfreundlicher und moderner sein als die alten Systeme.
+
+*   **Analyse der Faktoren:**
+    *   **Anforderungen:** Der Kernprozess ist stabil und klar, aber die Details der Benutzeroberfläche und die genauen Features für die Sachbearbeiter sind noch offen für Verbesserungen.
+    *   **Kunde & Stakeholder:** Es gibt klare Vorgaben von der Fachabteilung und dem Management (Rahmenbedingungen, Budget), aber die Endanwender (Sachbearbeiter) sollen aktiv in die Gestaltung der Oberfläche einbezogen werden.
+    *   **Projektumfeld:** Es gibt feste Rahmenbedingungen (Gesetze, IT-Sicherheitsvorgaben, Integration in Altsysteme), aber auch den Wunsch nach Innovation und verbesserter User Experience.
+    *   **Risikomanagement:** Ein Risiko ist die Nichteinhaltung des Budgets und des Zeitplans. Ein anderes Risiko ist, eine Lösung zu bauen, die von den Mitarbeitern nicht akzeptiert wird.
+
+*   **Empfohlene Methode: Hybrides Vorgehen (z.B. Water-Scrum-Fall)**
+    *   **Begründung:** Ein hybrider Ansatz kombiniert das Beste aus beiden Welten.
+        *   **Wasserfall (vorne):** Eine initiale Phase zur Grobplanung, Budgetierung und Analyse der technischen Rahmenbedingungen und Schnittstellen zu Altsystemen. Dies gibt dem Management die benötigte Planungssicherheit.
+        *   **Scrum (in der Mitte):** Die eigentliche Entwicklung der Web-Anwendung erfolgt in agilen Sprints. Das Team kann so iterativ die beste Benutzeroberfläche entwerfen, Prototypen mit den Sachbearbeitern testen und flexibel auf Feedback reagieren.
+        *   **Wasserfall (hinten):** Die finale Integration in die Gesamt-IT-Landschaft, die Abnahmetests und die unternehmensweite Einführung folgen wieder einem strukturierten, plan-getriebenen Prozess.
+
 
 <div style="page-break-after: always;"></div>
 
@@ -211,7 +291,6 @@ Das Hauptziel besteht darin, tiefgehendes und spezifisches Wissen zu erlangen, d
 **Arten von Interviews:**
 Je nach Grad der Vorstrukturierung unterscheidet man drei Hauptformen:
 
-1.  **Strukturiertes Interview:** Alle Fragen sind im Voraus exakt formuliert und werden in einer festen Reihenfolge gestellt. Es ähnelt einem mündlichen Fragebogen und stellt sicher, dass die Antworten verschiedener Personen gut vergleichbar sind.
 2.  **Unstrukturiertes (offenes) Interview:** Es gibt nur ein grobes Thema oder eine offene Einstiegsfrage (z.B. "Erzählen Sie mir von Ihrem Arbeitsalltag."). Das Gespräch entwickelt sich frei und eignet sich gut für die Erkundung eines neuen Themenfelds.
 3.  **Semi-strukturiertes Interview:** Dies ist die häufigste und flexibelste Form im Requirement-Engineering. Der Interviewer nutzt einen Leitfaden mit offenen Fragen, kann aber die Reihenfolge anpassen, spontan nachhaken und auf interessante Punkte des Gesprächspartners eingehen.
 
@@ -526,7 +605,7 @@ Die MoSCoW-Methode ist eine einfache und sehr verbreitete Technik zur Priorisier
     -   **Frage:** "Liegt diese Anforderung außerhalb unseres aktuellen Ziels?"
     -   *Beispiel:* "Aktienhandel integrieren" könnte für das erste Release der Banking-App ein "Won't have" sein.
 
-> <span style="font-size: 1.5em">:warning:</span> **Achtung:** Die größte Gefahr bei der MoSCoW-Methode ist, dass zu viele Anforderungen als "Must-have" klassifiziert werden. Eine gute Regel ist, dass die **"Must-haves"** nicht mehr als **60% des Gesamtaufwands** ausmachen sollten, um Puffer für die "Should-" und "Could-haves" zu lassen.
+> <span style="font-size: 1.5em">:warning:</span> Die größte Gefahr bei der MoSCoW-Methode ist, dass zu viele Anforderungen als "Must-have" klassifiziert werden. Eine gute Regel ist, dass die **"Must-haves"** nicht mehr als **60% des Gesamtaufwands** ausmachen sollten, um Puffer für die "Should-" und "Could-haves" zu lassen.
 
 <div style="page-break-after: always;"></div>
 
@@ -652,13 +731,13 @@ Die Art und Weise, wie dieser Konzeptentwicklungsprozess durchlaufen wird, unter
 
 > <span style="font-size: 1.5em">:bulb:</span> **Merksatz:** Während im Wasserfallmodell das Benutzerkonzept ein einmalig erstellter, starrer Bauplan ist, gleicht es im agilen Vorgehen eher einer Skizze, die in jedem Bauabschnitt (Sprint) basierend auf neuen Erkenntnissen verfeinert und angepasst wird.
 
-## 3.4. Tools und Dokumentationsstrategien
+## 3.5. Tools und Dokumentationsstrategien
 
 Die besten Methoden sind nur so gut wie ihre Umsetzung. Um Anforderungen effizient zu verwalten, benötigen wir die richtigen Werkzeuge und eine klare Strategie, wie wir sie dokumentieren.
 
 Stellen Sie sich vor, Sie hätten hunderte von Notizzetteln mit Anforderungen, aber kein System, um sie zu ordnen. Das Chaos wäre vorprogrammiert. Tools und Strategien sind unser Ordnungssystem.
 
-### 3.3.1. Werkzeuge (Tools)
+### 3.5.1. Werkzeuge (Tools)
 
 Es gibt eine breite Palette von Werkzeugen, von sehr einfachen bis hin zu hochkomplexen.
 
@@ -678,7 +757,7 @@ Es gibt eine breite Palette von Werkzeugen, von sehr einfachen bis hin zu hochko
     -   *Vorteil:* Spezialisiert auf die Verwaltung komplexer Anforderungssätze. Bieten starke Funktionen für Traceability, Analyse und Reporting.
     -   *Nachteil:* Oft teuer, komplex und erfordern eine intensive Einarbeitung. Meist in großen, sicherheitskritischen Projekten (Luftfahrt, Medizintechnik) im Einsatz.
 
-### 3.3.2. Dokumentationsstrategien
+### 3.5.2. Dokumentationsstrategien
 
 Unabhängig vom Tool sind folgende Strategien entscheidend, um den Überblick zu behalten und die Qualität der Anforderungen sicherzustellen.
 
@@ -746,79 +825,311 @@ Traceability ist der Schlüssel zur Kontrolle über komplexe Systeme. Sie beantw
 
 > <span style="font-size: 1.5em">:warning:</span> **Achtung:** Ein Werkzeug ist nur ein Hilfsmittel, es ersetzt nicht das Denken und die Kommunikation. Ein "Fool with a tool is still a fool". Ein einfaches, aber konsequent genutztes System ist immer besser als ein komplexes Tool, das niemand versteht oder pflegt.
 
-<div style="page-break-after: always;"></div>
-
-# 4. Kapitel: Projektmanagement
-
-## 4.1. Grundlagen des Projektmanagements
-
-- Rahmenbedingungen, Prozesse und Rollen im Software Engineering
-
-## 4.2. Requirement-Engineering im Projektmanagement
-
-- Integration von Anforderungen in den Projektverlauf
-- Praktische Beispiele und Fallstudien
-
-## 4.3. Testmanagement
-
-- Ziele, Prozesse und Qualitätskontrolle
-
-## 4.4. Change-Management
-
-- Ansätze zur Anpassung und Flexibilität im Projekt
-
-## 4.5. Aktuelle Vorgehensweisen und Best Practices
-
-- Moderne Methoden und Tools im Projektmanagement
-
-## 4.6. Puffer und Leistungsüberprüfung
-
-- Einsatzmöglichkeiten und Kontrollmechanismen
 
 <div style="page-break-after: always;"></div>
 
----
+# 4. Kapitel: Projektmanagement-Methoden erweitern
 
-# 5. Kapitel: Systemkonzeption, Sicherheit und IT-Recht
+In diesem Kapitel vertiefen wir die Grundlagen des Projektmanagements und konzentrieren uns auf agile Methoden, die in der modernen Softwareentwicklung vorherrschend sind. Wir lernen, wie man Projekte flexibel plant und steuert, um schnell auf Änderungen reagieren zu können.
 
-## 5.1. Grundlagen der Systemkonzeption
+## 4.1. Agile Methoden (Scrum, Kanban)
 
-- Wichtige Konzepte und Technologien
+Nachdem wir die grundlegenden Unterschiede zwischen traditionellen und agilen Ansätzen verstanden haben, tauchen wir nun tiefer in die Welt der agilen Methoden ein. Agilität ist mehr als nur ein Prozess – es ist eine Denkweise, die auf den Werten und Prinzipien des **Agilen Manifests** basiert. Die beiden populärsten und am weitesten verbreiteten Frameworks, die diese Denkweise in die Praxis umsetzen, sind **Scrum** und **Kanban**.
 
-## 5.2. Aktuelle Technologien und betriebliche Informationssysteme
+Stellen Sie sich eine professionelle Restaurantküche während des Hochbetriebs vor. Es gibt kein starres, monatelanges Vorausplanen jedes einzelnen Gerichts. Stattdessen arbeitet das Team in kurzen, intensiven Zyklen, reagiert auf eingehende Bestellungen, kommuniziert ständig und liefert kontinuierlich fertige Gerichte aus. Scrum und Kanban geben diesem organisierten Chaos eine Struktur.
 
-- Analyse und Praxisbeispiele
+### 4.1.1. Scrum: Das Framework für komplexe Produkte
 
-## 5.3. Prozessmodelle, Rollen und Methoden im Software Engineering
+Scrum ist das mit Abstand beliebteste agile Framework. Es ist kein detaillierter Prozess, sondern ein Rahmenwerk (`Framework`), innerhalb dessen Teams komplexe, adaptive Probleme lösen und dabei Produkte mit dem höchstmöglichen Wert kreativ und produktiv liefern können.
 
-- Operative und technische Prozessmodelle
+Stellen Sie sich ein Rugby-Team vor (woher der Name "Scrum" stammt). Das Team bewegt sich als geschlossene Einheit über das Spielfeld, passt sich ständig der Spielsituation an und hat ein klares Ziel vor Augen: den Ball über die Linie zu bringen.
 
-## 5.4. Ist-Erhebung, Analyse, Entwurf und Qualitätssicherung
+#### Die Säulen von Scrum
 
-- Methoden zur Aufwandsschätzung und Qualitätssicherung
+Scrum basiert auf drei Säulen, die den empirischen Prozess steuern:
 
-## 5.5. Qualitätsmanagement, Produktdokumentation und Wartung
+1.  **Transparenz:** Alle für den Erfolg relevanten Aspekte des Prozesses müssen für alle Beteiligten (Kunde, Team, Management) sichtbar sein. Wichtige Artefakte wie das Product Backlog oder das Sprint Backlog sind für alle zugänglich.
+2.  **Überprüfung (Inspection):** Die Scrum-Artefakte und der Fortschritt in Richtung des Ziels müssen regelmäßig überprüft werden, um unerwünschte Abweichungen zu erkennen. Dies geschieht in den Scrum-Events (z.B. Sprint Review).
+3.  **Anpassung (Adaptation):** Wenn die Überprüfung eine Abweichung vom Kurs ergibt, muss der Prozess oder das Produkt angepasst werden. Die Sprint Retrospektive ist ein zentrales Event, um den Arbeitsprozess selbst kontinuierlich zu verbessern.
 
-- Strategien und Best Practices
+#### Die Komponenten von Scrum
 
-## 5.6. Zusätzliche Themen/Puffer
+Scrum besteht aus drei Rollen, fünf Events (Ereignissen) und drei Artefakten.
 
-- Optionale Inhalte zur Leistungsüberprüfung
+**Die Scrum-Rollen (Das Scrum Team):**
+
+*   **Product Owner (Der Visionär):**
+    *   Ist die "Stimme des Kunden" und allein verantwortlich für die Verwaltung des **Product Backlogs**.
+    *   Seine Hauptaufgabe ist die **Maximierung des Werts** des Produkts, das vom Entwicklungsteam erstellt wird. Er entscheidet, *was* entwickelt wird und in welcher Reihenfolge (Priorisierung).
+
+*   **Development Team (Die Umsetzer):**
+    *   Besteht aus 3 bis 9 professionellen Entwicklern, die selbstorganisiert und interdisziplinär arbeiten.
+    *   Sie sind dafür verantwortlich, am Ende jedes Sprints ein potenziell auslieferbares Produktinkrement ("Done") zu erstellen. Sie entscheiden, *wie* die Anforderungen umgesetzt werden.
+
+*   **Scrum Master (Der Coach):**
+    *   Ist ein "Servant-Leader", der dem Team hilft, Scrum korrekt zu verstehen und anzuwenden.
+    *   Er beseitigt Hindernisse (Impediments), die das Team an seiner Arbeit hindern, und schützt das Team vor externen Störungen. Er ist der Hüter des Prozesses.
+
+**Die Scrum-Events (Der Rhythmus):**
+
+Alle Events in Scrum sind zeitlich begrenzt ("Time-boxed").
+
+1.  **Der Sprint:**
+    *   Das Herz von Scrum. Ein Zeitfenster von maximal einem Monat (meist 2-3 Wochen), in dem ein "fertiges", nutzbares und potenziell auslieferbares Produktinkrement erstellt wird. Ein neuer Sprint beginnt unmittelbar nach Abschluss des vorherigen.
+
+2.  **Sprint Planning:**
+    *   Findet zu Beginn jedes Sprints statt. Das gesamte Scrum-Team plant die Arbeit für den kommenden Sprint.
+    *   *Was* kann in diesem Sprint geliefert werden? (Der Product Owner stellt die wichtigsten Items aus dem Product Backlog vor).
+    *   *Wie* wird die ausgewählte Arbeit erledigt? (Das Development Team plant die Umsetzung).
+    *   Das Ergebnis ist das **Sprint Backlog**.
+
+3.  **Daily Scrum (Stand-up):**
+    *   Ein tägliches, 15-minütiges Meeting für das Development Team.
+    *   Jeder beantwortet kurz drei Fragen:
+        1.  Was habe ich gestern getan, um das Sprint-Ziel zu erreichen?
+        2.  Was werde ich heute tun, um das Sprint-Ziel zu erreichen?
+        3.  Sehe ich irgendwelche Hindernisse (Impediments)?
+    *   Es dient der Synchronisation und der Planung für die nächsten 24 Stunden.
+
+4.  **Sprint Review:**
+    *   Findet am Ende des Sprints statt. Das Scrum-Team und die Stakeholder (z.B. der Kunde) treffen sich.
+    *   Das Development Team präsentiert, *was* im Sprint fertiggestellt wurde (das Inkrement).
+    *   Es ist ein informelles Arbeitsmeeting, um Feedback zu sammeln und das Product Backlog für den nächsten Sprint anzupassen.
+
+5.  **Sprint Retrospective:**
+    *   Findet nach dem Sprint Review und vor dem nächsten Sprint Planning statt.
+    *   Das gesamte Scrum-Team blickt auf den vergangenen Sprint zurück, um den **Arbeitsprozess** zu verbessern.
+    *   Drei Fragen stehen im Mittelpunkt: Was lief gut? Was lief nicht so gut? Was können wir im nächsten Sprint verbessern?
+
+**Die Scrum-Artefakte (Die Werkzeuge):**
+
+*   **Product Backlog:**
+    *   Eine geordnete, dynamische Liste von allem, was für das Produkt bekannt ist und benötigt wird (Features, Funktionen, Anforderungen, Verbesserungen, Fehlerbehebungen).
+    *   Der Product Owner ist für den Inhalt, die Verfügbarkeit und die Priorisierung verantwortlich.
+
+*   **Sprint Backlog:**
+    *   Die Menge der für den Sprint ausgewählten Product-Backlog-Einträge plus ein Plan für die Lieferung des Produktinkrements.
+    *   Es ist die Prognose des Development Teams darüber, welche Funktionalität im nächsten Inkrement enthalten sein wird und welche Arbeit erforderlich ist, um diese Funktionalität zu liefern.
+
+*   **Inkrement:**
+    *   Die Summe aller im aktuellen Sprint fertiggestellten Product-Backlog-Einträge und der Wert der Inkremente aller vorherigen Sprints.
+    *   Am Ende eines Sprints muss das neue Inkrement "Done" sein, was bedeutet, dass es in einem nutzbaren Zustand ist und die **Definition of Done** des Teams erfüllt.
+
+> <span style="font-size: 1.5em">:bulb:</span> **Merksatz:** Scrum ist einfach zu verstehen, aber schwer zu meistern. Es bietet einen klaren Rhythmus (Events) und klare Rollen, um in einem komplexen Umfeld durch kontinuierliches Feedback (Inspection & Adaptation) den bestmöglichen Wert zu schaffen.
+
+### 4.1.2. Kanban: Der Weg zur kontinuierlichen Verbesserung
+
+Kanban (japanisch für "visuelle Karte" oder "Signal") ist keine Projektmanagement-Methode im gleichen Sinne wie Scrum, sondern ein Ansatz zur **Verbesserung von Arbeitsabläufen**. Es stammt ursprünglich aus der Produktionssteuerung von Toyota und wurde für die Softwareentwicklung und andere Wissensarbeitsbereiche adaptiert.
+
+Stellen Sie sich eine Autobahn mit mehreren Spuren vor. Der Verkehr soll möglichst gleichmäßig und ohne Stau fließen. Kanban hilft dabei, den "Verkehr" der Aufgaben so zu steuern, dass Engpässe vermieden werden und die Arbeit kontinuierlich und effizient erledigt wird.
+
+#### Die Kernprinzipien von Kanban
+
+1.  **Visualisiere den Workflow:**
+    *   Das Herzstück ist das **Kanban-Board**. Es macht die Arbeit und den Workflow für alle sichtbar. Ein einfaches Board hat Spalten wie "Zu erledigen" (To Do), "In Arbeit" (In Progress) und "Erledigt" (Done).
+    *   Jede Aufgabe wird auf einer Karte (Kanban) dargestellt, die durch die Spalten wandert.
+
+2.  **Limitiere die angefangene Arbeit (Work in Progress - WIP):**
+    *   Dies ist das wichtigste und mächtigste Prinzip. Für jede Spalte des Workflows (insbesondere für die "In Arbeit"-Phasen) wird eine Obergrenze für die Anzahl der Aufgaben festgelegt, die sich gleichzeitig darin befinden dürfen (WIP-Limit).
+    *   *Beispiel:* Wenn die Spalte "Testing" ein WIP-Limit von 2 hat, dürfen die Tester keine neue Aufgabe beginnen, bevor eine der beiden aktuellen Aufgaben abgeschlossen ist.
+    *   **Zweck:** Verhindert Multitasking, deckt Engpässe im System auf und zwingt das Team, sich auf die Fertigstellung von Aufgaben zu konzentrieren, anstatt immer neue zu beginnen. Es etabliert ein **Pull-System**: Arbeit wird nur dann in den nächsten Schritt "gezogen", wenn dort Kapazität frei ist.
+
+3.  **Manage den Fluss (Flow):**
+    *   Das Ziel ist, den Arbeitsfluss zu maximieren und die Durchlaufzeit (die Zeit, die eine Aufgabe von Anfang bis Ende benötigt) zu minimieren.
+    *   Das Team analysiert den Fluss, identifiziert Engpässe (wo stauen sich die Karten?) und arbeitet daran, diese zu beseitigen.
+
+4.  **Mache Prozessregeln explizit:**
+    *   Alle Regeln für den Workflow müssen klar definiert und für alle sichtbar sein.
+    *   *Beispiel:* "Was bedeutet 'Done' für eine Aufgabe?", "Wann wird eine Aufgabe als 'dringend' markiert?".
+
+5.  **Implementiere Feedback-Schleifen:**
+    *   Regelmäßige Meetings (ähnlich wie in Scrum, aber oft weniger formalisiert) sind entscheidend, um den Prozess zu überprüfen und zu verbessern. Beispiele sind tägliche Stand-ups oder regelmäßige Service-Delivery-Reviews.
+
+6.  **Verbessere kollaborativ, evolviere experimentell:**
+    *   Kanban ist ein evolutionärer Ansatz. Man startet mit dem bestehenden Prozess und verbessert ihn schrittweise. Veränderungen werden im Team besprochen und als Experimente umgesetzt.
+
+#### Scrum vs. Kanban: Ein Vergleich
+
+Obwohl beide agil sind, haben sie unterschiedliche Schwerpunkte.
+
+| Merkmal | Scrum | Kanban |
+| :--- | :--- | :--- |
+| **Rhythmus** | Zeitlich fixierte Sprints (z.B. 2 Wochen) | Kontinuierlicher Fluss (keine Sprints) |
+| **Fokus** | Ein festes Ziel pro Sprint erreichen | Den Workflow optimieren und die Durchlaufzeit reduzieren |
+| **Rollen** | Vordefiniert (Product Owner, Scrum Master, Dev Team) | Keine vordefinierten Rollen (man startet mit den bestehenden) |
+| **Änderungen** | Änderungen innerhalb eines Sprints werden vermieden, um das Sprint-Ziel nicht zu gefährden | Änderungen sind jederzeit möglich, solange die WIP-Limits eingehalten werden |
+| **Metriken** | **Velocity** (wie viele Story Points pro Sprint) | **Cycle Time** (Durchlaufzeit), **Throughput** (Durchsatz) |
+| **Ideal für...** | Produktentwicklung mit klaren Release-Zyklen | Service-orientierte Teams (z.B. Support, Wartung) oder Teams, die einen bestehenden Prozess schrittweise verbessern wollen |
+
+> <span style="font-size: 1.5em">:mag:</span> **Vertiefung:** Viele Teams nutzen eine Kombination aus beiden Ansätzen, oft als **"Scrumban"** bezeichnet. Sie arbeiten in Sprints (wie Scrum), nutzen aber ein Kanban-Board mit WIP-Limits, um den Workflow innerhalb des Sprints zu visualisieren und zu optimieren. Dies verbindet die Struktur von Scrum mit der Flexibilität und dem Fokus auf den Flow von Kanban.
+
+## 4.2. Hybride Modelle
+
+In der Praxis treffen wir selten auf die reine Lehre einer einzigen Projektmanagement-Methode. Stattdessen passen Organisationen und Teams ihre Vorgehensweisen an ihre spezifischen Bedürfnisse an. Hier kommen **hybride Modelle** ins Spiel. Sie sind pragmatische Lösungen, die gezielt Elemente aus verschiedenen Welten kombinieren, um die jeweiligen Vorteile zu nutzen.
+
+Dabei lassen sich zwei Hauptrichtungen von hybriden Ansätzen unterscheiden:
+
+1.  **Kombination agiler Frameworks:** Teams mischen die Praktiken verschiedener agiler Methoden, um ihren internen Arbeitsfluss zu optimieren. Ein klassisches Beispiel ist die Verbindung der strukturierten Events aus Scrum mit dem Fokus auf einen kontinuierlichen Fluss aus Kanban. Dies führt zu Modellen wie **Scrumban**.
+
+2.  **Kombination von agilen und traditionellen Ansätzen:** Größere Unternehmen müssen oft die Flexibilität der agilen Entwicklung mit den Anforderungen einer langfristigen, plan-getriebenen Unternehmenssteuerung (z.B. feste Budgets, Jahresplanung, starre Liefertermine) in Einklang bringen. Hier entstehen Modelle wie der **Water-Scrum-Fall**, die eine Brücke zwischen diesen beiden Welten schlagen.
+
+In den folgenden Abschnitten betrachten wir diese beiden populären hybriden Modelle genauer.
+
+### 4.2.1. Das Scrumban-Modell: Die Brücke zwischen Scrum und Kanban
+
+Stellen Sie sich vor, Sie haben die strukturierte Wochenplanung von Scrum (den Sprint), möchten aber die Flexibilität haben, auf dringende, unvorhergesehene Aufgaben zu reagieren, ohne den gesamten Plan über den Haufen zu werfen. Hier kommt Scrumban ins Spiel – ein hybrides Modell, das die Stärken von Scrum und Kanban vereint.
+
+Scrumban ist kein offiziell definiertes Framework, sondern eine pragmatische Anpassung, die Teams vornehmen, um ihren Prozess zu optimieren. Es kombiniert die Zeremonien und Rollen von Scrum mit dem Fokus auf den Arbeitsfluss und die Visualisierung von Kanban.
+
+#### Was nimmt Scrumban von Scrum?
+
+-   **Iterationen (Sprints):** Die Arbeit wird weiterhin in kurzen, zeitlich begrenzten Zyklen geplant. Dies gibt dem Prozess einen Rhythmus und sorgt für regelmäßige Planungs- und Review-Punkte.
+-   **Events:** Die regelmäßigen Meetings wie **Sprint Planning**, **Sprint Review** und die **Retrospektive** werden beibehalten, um die Planung, das Feedback und die Prozessverbesserung sicherzustellen. Auch das **Daily Stand-up** findet statt.
+-   **Rollen:** Die Rollen wie Product Owner und Scrum Master können beibehalten werden, um die Verantwortlichkeiten für das Produkt und den Prozess klar zu definieren.
+
+#### Was nimmt Scrumban von Kanban?
+
+-   **Kanban-Board mit WIP-Limits:** Der zentrale Unterschied zu reinem Scrum. Der Workflow innerhalb eines Sprints wird auf einem Kanban-Board visualisiert, und die Menge der parallelen Arbeit wird durch **Work-in-Progress (WIP)-Limits** begrenzt.
+-   **Fokus auf den Fluss (Flow):** Das Hauptziel ist nicht mehr nur das Abarbeiten des Sprint Backlogs, sondern die Optimierung des Arbeitsflusses. Das Team konzentriert sich darauf, Aufgaben so schnell wie möglich von "In Arbeit" zu "Erledigt" zu bewegen.
+-   **Pull-Prinzip:** Eine neue Aufgabe wird erst dann begonnen, wenn in der entsprechenden Spalte des Boards Kapazität frei wird (das WIP-Limit es erlaubt).
+-   **Flexibilität bei der Planung:** Im Gegensatz zum starren Sprint Backlog in Scrum erlaubt Scrumban oft, neue, dringende Aufgaben in den laufenden Sprint aufzunehmen, solange die WIP-Limits nicht überschritten werden.
+
+#### Wann ist Scrumban sinnvoll?
+
+Scrumban ist oft eine gute Wahl für:
+
+-   **Teams im Übergang:** Für Teams, die von Scrum zu Kanban wechseln wollen (oder umgekehrt), bietet Scrumban einen sanften Übergang.
+-   **Wartungs- und Support-Teams:** Teams, die neben geplanter Projektarbeit auch auf unvorhersehbare Anfragen (z.B. Bug-Fixes, Support-Tickets) reagieren müssen.
+-   **Prozessoptimierung:** Wenn ein Scrum-Team seinen Workflow verbessern und Engpässe sichtbar machen möchte.
+
+> <span style="font-size: 1.5em">:mag:</span> **Vertiefung:** In Scrumban wird die Planung oft flexibler. Statt eines festen Sprint-Commitments plant das Team im Sprint Planning, welche Aufgaben es als Nächstes aus dem Backlog "ziehen" wird. Die Priorisierung kann während des Sprints angepasst werden, was eine schnellere Reaktion auf Änderungen ermöglicht als in reinem Scrum.
+
+
+### 4.2.2. Der Scrum-Fall: Agilität im strukturierten Rahmen
+
+#### **Struktur des Water-Scrum-Fall Modell**
+
+Das Modell gliedert sich typischerweise in drei übergeordnete Phasen:
+
+1.  **Phase 1: Wasserfall (Planung & Design)**
+    -   **Aktivitäten:** In dieser initialen Phase werden die übergeordneten Projektziele, der grobe Umfang (Scope), das Budget und die grundlegende Systemarchitektur definiert. Dies ähnelt der klassischen Anforderungsanalyse und dem Grob-Design.
+    -   **Ergebnis:** Ein Lastenheft oder eine grobe Produktvision und ein initiales Product Backlog.
+
+2.  **Phase 2: Scrum (Entwicklung & Implementierung)**
+    -   **Aktivitäten:** Die eigentliche Produktentwicklung findet hier in agilen Sprints statt. Das Entwicklungsteam arbeitet das Product Backlog iterativ ab, liefert in regelmäßigen Abständen funktionierende Produktinkremente und holt kontinuierlich Feedback ein.
+    -   **Ergebnis:** Ein getestetes, potenziell auslieferbares Produktinkrement nach jedem Sprint.
+
+3.  **Phase 3: Wasserfall (Integration, Release & Wartung)**
+    -   **Aktivitäten:** Nach Abschluss der Entwicklungs-Sprints folgen oft wieder klassische Phasen. Dazu gehören die Integration des neuen Systems in die bestehende IT-Landschaft, finale Abnahmetests, die Schulung der Anwender und der offizielle Rollout (Go-live).
+    -   **Ergebnis:** Das final ausgelieferte und in Betrieb genommene Gesamtsystem.
+
+#### **Wann ist der Scrum-Fall sinnvoll?**
+
+Dieser Ansatz eignet sich besonders in folgenden Situationen:
+
+-   **Große Organisationen:** Wenn agile Teams in eine traditionell strukturierte Organisation mit festen Budget- und Reporting-Zyklen eingebettet sind.
+-   **Hardware-Abhängigkeiten:** Bei Projekten, die sowohl Software- als auch Hardware-Entwicklung umfassen (z.B. im Maschinenbau oder in der Medizintechnik), wo die Hardware-Entwicklung langen, sequenziellen Zyklen folgt.
+-   **Regulatorische Anforderungen:** In stark regulierten Branchen (z.B. Pharma, Finanzen), die zu Beginn und am Ende des Projekts eine umfassende, formale Dokumentation und Abnahme erfordern.
+
+> <span style="font-size: 1.5em">:warning:</span> **Achtung:** Die größte Herausforderung bei **hybriden (statisch-agilen)** Modellen ist der Übergang zwischen den Phasen. Es besteht die Gefahr, dass die agilen Prinzipien (wie Flexibilität und Reaktion auf Veränderung) durch den starren Rahmen des Wasserfalls ausgehöhlt werden. Eine klare Kommunikation und ein gutes Verständnis für beide Welten sind entscheidend für den Erfolg.
 
 <div style="page-break-after: always;"></div>
 
----
 
-# 6. Zusammenfassung und Ausblick
+## 4.3. Planung von Iterationen und Sprints
 
-- Kernaussagen der einzelnen Kapitel
-- Weiterführende Themen, Ressourcen und Literaturtipps
+Nachdem wir die agilen Frameworks Scrum und Kanban kennengelernt haben, widmen wir uns nun dem Herzstück der agilen Umsetzung: der **Planung von Iterationen**, in Scrum **Sprints** genannt. Die Sprint-Planung ist das Ereignis, das den Rhythmus für die gesamte Entwicklungsarbeit vorgibt. Hier verpflichtet sich das Team auf ein erreichbares Ziel für den kommenden Zyklus.
+
+Stellen Sie sich vor, Sie bereiten sich auf eine Bergtour vor, die aus mehreren Etappen besteht. Die Sprint-Planung ist die Besprechung am Morgen vor jeder Etappe. Das Team schaut auf die Gesamtkarte (das Product Backlog), entscheidet, welches Zwischenziel (das Sprint-Ziel) heute erreicht werden soll, und plant die genaue Route und die notwendigen Aufgaben, um dieses Ziel zu erreichen.
+
+### 4.3.1. Der Ablauf des Sprint Plannings
+
+Das Sprint Planning ist ein zeitlich begrenztes Meeting (typischerweise maximal 8 Stunden für einen einmonatigen Sprint), das zu Beginn jedes Sprints stattfindet und zwei zentrale Fragen beantwortet:
+
+1.  **Was** kann in diesem Sprint geliefert werden?
+2.  **Wie** wird die ausgewählte Arbeit erledigt?
+
+#### Teil 1: Das "Was" – Sprint-Ziel und Backlog-Auswahl
+
+-   **Input:** Der **Product Owner** kommt mit einem priorisierten **Product Backlog** in das Meeting. Er erläutert die wichtigsten Einträge (meist User Stories) und beantwortet Fragen des Entwicklungsteams, um sicherzustellen, dass alle das gleiche Verständnis haben.
+-   **Diskussion:** Das gesamte Scrum-Team (Product Owner, Scrum Master, Entwicklungsteam) diskutiert die Ziele und die Umsetzbarkeit.
+-   **Ergebnis:** Das Team formuliert ein **Sprint-Ziel (Sprint Goal)**. Dies ist ein kurzer Satz, der beschreibt, was der Sprint zu erreichen versucht und warum er für die Stakeholder wertvoll ist. Anschließend wählt das Entwicklungsteam die Anzahl der Product-Backlog-Einträge aus, die es für realistisch hält, um dieses Ziel zu erreichen.
+
+#### Teil 2: Das "Wie" – Die Umsetzung planen
+
+-   **Input:** Die vom Team ausgewählten Backlog-Einträge.
+-   **Aktivität:** Das Entwicklungsteam zerlegt die ausgewählten User Stories in kleinere, konkrete **technische Aufgaben (Tasks)**. Diese Aufgaben sind oft nur einen Tag oder weniger lang.
+-   **Ergebnis:** Das **Sprint Backlog**. Es besteht aus dem Sprint-Ziel, den ausgewählten Product-Backlog-Einträgen und dem Plan zur Umsetzung (den heruntergebrochenen Tasks). Das Sprint Backlog ist der Plan des Entwicklungsteams für den Sprint.
+
+### 4.3.2. Schätzung des Aufwands: Story Points und Planning Poker
+
+Um eine fundierte Auswahl für den Sprint treffen zu können, muss das Team den Aufwand der Product-Backlog-Einträge schätzen. In agilen Teams wird Aufwand selten in Stunden oder Tagen geschätzt, sondern in abstrakten Einheiten, den **Story Points**.
+
+-   **Story Points:** Sie sind eine relative Maßeinheit und bewerten den Gesamtaufwand einer User Story. Dieser Aufwand umfasst:
+    -   Die **Komplexität** der Aufgabe.
+    -   Die Menge der zu erledigenden **Arbeit**.
+    -   Die vorhandene **Unsicherheit** oder Risiken.
+
+-   **Planning Poker:** Eine spielerische und kollaborative Technik zur Schätzung.
+    1.  Der Product Owner stellt eine User Story vor.
+    2.  Jedes Mitglied des Entwicklungsteams wählt verdeckt eine Karte aus einem Kartensatz (oft mit Zahlen der Fibonacci-Reihe: 1, 2, 3, 5, 8, 13, ...), die seinem geschätzten Aufwand entspricht.
+    3.  Alle decken ihre Karten gleichzeitig auf.
+    4.  Haben alle den gleichen Wert gewählt, wird dieser übernommen. Bei großen Abweichungen diskutieren die Teammitglieder mit der höchsten und niedrigsten Schätzung ihre Gründe.
+    5.  Der Prozess wird wiederholt, bis sich das Team auf einen Wert geeinigt hat.
+
+> <span style="font-size: 1.5em">:bulb:</span> **Merksatz:** Planning Poker fördert die Diskussion und stellt sicher, dass das Wissen aller Teammitglieder in die Schätzung einfließt. Es geht nicht darum, eine "perfekte" Zahl zu finden, sondern ein gemeinsames Verständnis für die Aufgabe zu entwickeln.
+
+### 4.3.3. Der Einfluss der Systemarchitektur auf die Sprint-Planung
+
+Die Planung eines Sprints findet nicht im luftleeren Raum statt. Eine der wichtigsten Randbedingungen ist die bereits existierende oder geplante **System- und Software-Architektur**.
+
+Stellen Sie sich vor, Sie planen den Innenausbau eines Raumes. Ihre Planung hängt maßgeblich davon ab, ob die tragenden Wände, die Elektrik und die Wasseranschlüsse (die Architektur) bereits vorhanden und wie sie beschaffen sind.
+
+-   **Architektur als Leitplanke:** Die gewählte Architektur gibt vor, welche Aufgaben überhaupt möglich sind und wie komplex sie werden. Wenn die Architektur beispielsweise auf Microservices basiert, ist das Hinzufügen eines neuen, unabhängigen Features einfacher zu planen als in einer eng gekoppelten monolithischen Anwendung.
+-   **Architektur als Teil der Arbeit:** Besonders in frühen Sprints können Aufgaben darin bestehen, die Architektur selbst erst aufzubauen oder zu erweitern (sog. "Enabler Stories" oder "Spikes"). Eine Aufgabe im Sprint Backlog könnte lauten: "Datenbankschema für die Benutzerverwaltung entwerfen" oder "Schnittstelle zum Bezahldienstleister recherchieren und anbinden".
+-   **Abhängigkeiten aufdecken:** Die Architektur beeinflusst, welche Abhängigkeiten zwischen Aufgaben bestehen. Die Planung muss dies berücksichtigen. Beispielsweise kann die Arbeit am Frontend für die Benutzerprofilseite erst beginnen, wenn die entsprechende Datenspeicherung im Backend (Teil der Architektur) umgesetzt ist.
+
+> <span style="font-size: 1.5em">:warning:</span> **Achtung:** In der agilen Welt wird Architektur oft als **"emergent"** (entstehend) betrachtet. Man entwirft nicht die gesamte Architektur für Jahre im Voraus, sondern beginnt mit einer minimalen, aber soliden Basis ("Walking Skeleton") und lässt sie mit jeder Iteration wachsen. Dennoch müssen grundlegende Architekturentscheidungen früh getroffen werden, da sie weitreichende Folgen haben. **Wie man solche Architekturen entwirft und welche Muster es gibt, wird detailliert im nachfolgenden Kapitel 5 "Systementwurf und Architektur" behandelt.**
+
+# 5. Kapitel: Systementwurf und Architektur
+
+Nachdem wir wissen, *was* gebaut werden soll, klären wir hier, *wie* es gebaut wird. Dieses Kapitel wechselt von der Anwender- zur technischen Perspektive und legt den Grundstein für eine robuste und wartbare Software.
+
+## 5.1. Technische Architekturmuster
+Wir untersuchen bewährte Lösungsansätze für wiederkehrende Entwurfsprobleme, wie z.B. das Model-View-Controller (MVC) Muster oder eine einfache Schichtenarchitektur.
+
+## 5.2. Schnittstellenspezifikation (API-Design)
+Hier lernen wir, wie man Schnittstellen (APIs) klar definiert, damit verschiedene Teile eines Systems (oder verschiedene Systeme) miteinander kommunizieren können.
 
 <div style="page-break-after: always;"></div>
 
----
+# 6. Kapitel: Prototyping und Validierung
 
-# 7. Glossar
+Eine Idee auf Papier ist gut, ein erlebbares Produkt ist besser. In diesem Kapitel erstellen wir interaktive Prototypen, um unsere Konzepte frühzeitig zu testen und wertvolles Feedback von echten Benutzern zu sammeln.
+
+## 6.1. Interaktive Prototypen
+Wir nutzen moderne Werkzeuge (wie Figma, Pencil etc.), um klickbare Mockups zu erstellen, die das Look-and-Feel der finalen Anwendung simulieren.
+
+## 6.2. Durchführung von Nutzertests
+Dieser Abschnitt beschreibt, wie man systematisch Feedback von Testpersonen einholt, um die Benutzerfreundlichkeit (Usability) des Systems zu bewerten und zu verbessern.
+
+<div style="page-break-after: always;"></div>
+
+# 7. Kapitel: Integration in das Semesterprojekt
+
+In diesem Kapitel führen wir alle bisher gelernten Methoden und Techniken in einem größeren, zusammenhängenden Semesterprojekt zusammen. Ziel ist es, den gesamten Prozess von der Anforderung bis zum validierten Prototypen praxisnah zu durchlaufen.
+
+<div style="page-break-after: always;"></div>
+
+# 8. Zusammenfassung und Ausblick
+
+Hier fassen wir die wichtigsten Erkenntnisse des Jahres zusammen und geben einen Ausblick auf weiterführende Themen und mögliche Spezialisierungen im Bereich Projektmanagement und Systemdesign.
+
+<div style="page-break-after: always;"></div>
+
+# 9. Glossar
+
+In diesem Abschnitt werden alle wichtigen Fachbegriffe, die im Skript verwendet wurden, alphabetisch geordnet und kurz erklärt.
 
 - **Agile Manifest:** Ein 2001 veröffentlichtes Dokument, das die zentralen Werte und Prinzipien der agilen Softwareentwicklung formuliert. Es bevorzugt Individuen und Interaktionen, funktionierende Software, Zusammenarbeit mit dem Kunden und das Reagieren auf Veränderungen.
 
@@ -880,8 +1191,9 @@ Traceability ist der Schlüssel zur Kontrolle über komplexe Systeme. Sie beantw
 
 <div style="page-break-after: always;"></div>
 
----
+<div style="page-break-after: always;"></div>
 
-# 8. Anhang
+# 10. Anhang
 
-- Zusatzmaterialien, weiterführende Links, Diagramme und FAQ
+Der Anhang enthält ergänzende Materialien, wie z.B. Vorlagen, Checklisten oder weiterführende Links.
+
