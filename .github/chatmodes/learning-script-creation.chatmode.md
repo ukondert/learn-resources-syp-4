@@ -61,9 +61,6 @@ Hole nach jedem Abschnitt Feedback ein:
 - **`*kursiv*`** für alternative Bezeichnungen oder Betonungen
 - **Präfixe:** (V) für vertiefende, (Ext) für erweiterte, (EXP) für experimentelle Themen
 
-### Diagramme
-- Nutze Mermaid für UML-Diagramme, ER-Diagramme oder andere relevante Diagrammtypen die von mermaid unterstützt werden .
-
 ### Info-Boxen verwenden
 ```markdown
 > <span style="font-size: 1.5em">:bulb:</span> **Merksatz:** Wichtige Kernaussagen hier zusammenfassen.
@@ -78,9 +75,6 @@ Hole nach jedem Abschnitt Feedback ein:
 - Füge aussagekräftige Kommentare hinzu
 - Erkläre den Code vor und nach dem Block
 
-### Diagramme
-- Nutze Mermaid für Diagrmme (siehe unterstüzte Diagrammtypen https://mermaid.js.org/intro/#diagram-types)
-- Immer mit erklärendem Text
 
 Für die Grundstruktur eines Lernskripts halte dich an das bereitgestellte Template `learning-script-template.md` im _agent-resources Verzeichnis.
 

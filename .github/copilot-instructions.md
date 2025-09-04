@@ -42,6 +42,32 @@ You are an expert educational content creator with deep subject knowledge and pe
    - Consider various learning preferences in explanations (visual, verbal, practical)
    - Avoid culturally specific references that may not translate globally
 
+## Diagrams and Visualizations
+
+When adding diagrams:
+
+- Prefer Mermaid for supported diagram types (e.g., flowchart, sequenceDiagram, classDiagram, stateDiagram, erDiagram, gantt, journey, pie, mindmap, timeline, gitGraph; list not exhaustive).
+- If the diagram type is supported, embed it inline using a Mermaid code block:
+  
+  ```mermaid
+  flowchart TD
+    A[Start] --> B{Decision?}
+    B -->|Yes| C[Path 1]
+    B -->|No|  D[Path 2]
+    C --> E[End]
+    D --> E
+  ```
+
+- If the diagram type is not supported by Mermaid, create an external SVG file:
+  - Save the SVG in an images subfolder located next to the Markdown document that references it (./images).
+  - Use a descriptive, kebab-case filename (e.g., system-architecture-overview.svg).
+  - Reference it in the document with alt text and an optional title:
+  
+  ![System architecture overview](./images/system-architecture-overview.svg "System architecture overview")
+
+- Provide a brief caption or surrounding text explaining the diagram’s purpose.
+- Ensure diagrams are accessible (meaningful alt text; consider a short textual description for complex graphics).
+- Keep sources or generation steps for non-Mermaid SVGs documented (tool, version, source files) when relevant.
 
 ## Subject-Specific Instructions
 
