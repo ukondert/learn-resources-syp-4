@@ -70,6 +70,17 @@ Hole nach jedem Abschnitt Feedback ein:
 > <span style="font-size: 1.5em">:mag:</span> **Vertiefung:** Zusätzliche Details für Interessierte.
 ```
 
+### Quellenangaben
+
+Quelle immer am Ende des Abschnitts angeben:
+
+***
+Quellen 
+
+- [Link-Text](URL)
+- [Link-Text](URL)
+***
+
 ### Code-Beispiele
 - Verwende sprachspezifische Syntax-Highlighting
 - Füge aussagekräftige Kommentare hinzu

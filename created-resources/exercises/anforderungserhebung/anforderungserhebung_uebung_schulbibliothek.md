@@ -5,14 +5,14 @@
 **Szenario:**
 Ihre Schule möchte die Verwaltung der Schulbibliothek modernisieren. Bisher werden alle Ausleihen und Rückgaben manuell in einer Liste erfasst. Es gibt oft lange Wartezeiten und der Überblick über verfügbare Bücher geht schnell verloren.
 
-Sie sind Teil eines Projektteams, das eine einfache App entwickeln soll, um diesen Prozess zu digitalisieren. Die App soll Schülern und Lehrern das Leben erleichtern.
+Sie sind Teil eines Projektteams, das eine einfache Adminstrations App (für den Biblothekar)vund eine Mobile App für die "Kunden" (Schüler und Lehrer) entwickeln soll, um diesen Prozess zu digitalisieren. Die App soll dem Bibliothekar, Schülern und Lehrern das Leben erleichtern.
 
 **Ihre Aufgaben:**
 
 **1. Stakeholder identifizieren und Erhebungsmethoden auswählen (Bezug zu Kap. 3.2)**
 
-*   Identifizieren Sie mindestens drei verschiedene **Stakeholder**-Gruppen für dieses Projekt.
-*   Wählen Sie zwei der im Skript genannten **Erhebungstechniken** (z.B. Interview, Workshop, Fragebogen, Beobachtung), die Sie für die Anforderungserhebung bei diesen Stakeholdern einsetzen würden.
+*   Identifizieren Sie mindestens **drei** verschiedene **Stakeholder**-Gruppen für dieses Projekt.
+*   Wählen Sie **zwei** der im Skript genannten **Erhebungstechniken** (z.B. Interview, Workshop, Fragebogen, Beobachtung), die Sie für die Anforderungserhebung bei diesen Stakeholdern einsetzen würden.
 *   Begründen Sie kurz, warum Sie sich für diese Techniken entschieden haben und welche Informationen Sie sich von jeder Technik erhoffen.
 
 **2. Erhebungstechnik detailliert ausarbeiten (Praktische Anwendung)**
@@ -36,7 +36,7 @@ Sie sind Teil eines Projektteams, das eine einfache App entwickeln soll, um dies
 
 **3. Anforderungen als User Stories formulieren (Bezug zu Kap. 3.2.2.1)**
 
-Versetzen Sie sich in die Lage der zukünftigen Nutzer. Formulieren Sie mindestens **4 User Stories** für die neue Bibliotheks-App.
+Versetzen Sie sich in die Lage der zukünftigen Nutzer. Formulieren Sie mindestens **5 User Stories** für die neue Bibliotheks-App.
 
 Arbeiten Sie diese User Stories nach dem **3-C-Modell** (Card, Conversation, Confirmation) aus, wie im Lernskript beschrieben:
 *   **Card:** Formulieren Sie die User Story prägnant im Format: `Als <Rolle> möchte ich <Ziel/Wunsch>, um <Nutzen> zu erreichen.`

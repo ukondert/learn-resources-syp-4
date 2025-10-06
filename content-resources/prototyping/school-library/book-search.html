@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Library Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-black dark:text-white">
+<div class="flex flex-col min-h-screen">
+<div class="p-4 space-y-6 flex-grow">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-black/50 dark:text-white/50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-background-dark/50 border border-black/10 dark:border-white/10 rounded-xl text-black dark:text-white placeholder-black/40 dark:placeholder-white/40 focus:ring-primary focus:border-primary" placeholder="Search book title or ISBN" type="text"/>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<input type="checkbox" id="category-enabled" class="w-4 h-4 text-primary bg-white dark:bg-background-dark/50 border-black/10 dark:border-white/10 rounded focus:ring-primary focus:ring-2" checked>
+<label class="text-sm font-medium text-black/80 dark:text-white/80" for="category">Category</label>
+</div>
+<div class="relative mt-1">
+<select class="w-full appearance-none pl-4 pr-10 py-3 bg-white dark:bg-background-dark/50 border border-black/10 dark:border-white/10 rounded-lg text-black dark:text-white focus:ring-primary focus:border-primary" id="category">
+<option>All Categories</option>
+<option>Fiction</option>
+<option>Non-Fiction</option>
+<option>Science</option>
+<option>History</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-black/50 dark:text-white/50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" fill-rule="evenodd"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<input type="checkbox" id="author-enabled" class="w-4 h-4 text-primary bg-white dark:bg-background-dark/50 border-black/10 dark:border-white/10 rounded focus:ring-primary focus:ring-2" checked>
+<label class="text-sm font-medium text-black/80 dark:text-white/80" for="author">Author</label>
+</div>
+<input class="w-full mt-1 pl-4 pr-4 py-3 bg-white dark:bg-background-dark/50 border border-black/10 dark:border-white/10 rounded-lg text-black dark:text-white placeholder-black/40 dark:placeholder-white/40 focus:ring-primary focus:border-primary" id="author" placeholder="e.g. J.K. Rowling" type="text"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<input type="checkbox" id="book-type-enabled" class="w-4 h-4 text-primary bg-white dark:bg-background-dark/50 border-black/10 dark:border-white/10 rounded focus:ring-primary focus:ring-2" checked>
+<label class="text-sm font-medium text-black/80 dark:text-white/80" for="book-type">Book Type</label>
+</div>
+<div class="relative mt-1">
+<select class="w-full appearance-none pl-4 pr-10 py-3 bg-white dark:bg-background-dark/50 border border-black/10 dark:border-white/10 rounded-lg text-black dark:text-white focus:ring-primary focus:border-primary" id="book-type">
+<option>Any</option>
+<option>Hardcover</option>
+<option>Paperback</option>
+<option>E-book</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-black/50 dark:text-white/50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" fill-rule="evenodd"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<input type="checkbox" id="publication-year-enabled" class="w-4 h-4 text-primary bg-white dark:bg-background-dark/50 border-black/10 dark:border-white/10 rounded focus:ring-primary focus:ring-2" checked>
+<label class="text-sm font-medium text-black/80 dark:text-white/80">Publication Year</label>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<input class="w-full pl-4 pr-4 py-3 bg-white dark:bg-background-dark/50 border border-black/10 dark:border-white/10 rounded-lg text-black dark:text-white placeholder-black/40 dark:placeholder-white/40 focus:ring-primary focus:border-primary" placeholder="From" type="number"/>
+<span class="text-black/50 dark:text-white/50">-</span>
+<input class="w-full pl-4 pr-4 py-3 bg-white dark:bg-background-dark/50 border border-black/10 dark:border-white/10 rounded-lg text-black dark:text-white placeholder-black/40 dark:placeholder-white/40 focus:ring-primary focus:border-primary" placeholder="To" type="number"/>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full py-3 rounded-xl bg-primary text-white text-base font-semibold shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+Search
+</button>
+</div>
+</div>
+<div class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10">
+<div class="flex justify-around py-2">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" fill-rule="evenodd"></path></svg>
+<span class="text-xs font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black/50 dark:text-white/50" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.5c0 .338.216.626.5.707A9.735 9.735 0 006 21a9.707 9.707 0 005.25-1.533.75.75 0 00.5-.65V5.183a.75.75 0 00-.5-.65z"></path><path d="M12.75 4.533A9.707 9.707 0 0118 3a9.735 9.735 0 013.25.555.75.75 0 01.5.707v14.5c0 .338-.216.626-.5.707A9.735 9.735 0 0118 21a9.707 9.707 0 01-5.25-1.533.75.75 0 01-.5-.65V5.183a.75.75 0 01.5-.65z"></path></svg>
+<span class="text-xs font-medium">My Books</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black/50 dark:text-white/50" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" fill-rule="evenodd"></path></svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+<div class="h-3.5 bg-background-light dark:bg-background-dark"></div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle field enabled/disabled state
+    function toggleField(checkboxId, fieldId) {
+        const checkbox = document.getElementById(checkboxId);
+        const field = document.getElementById(fieldId);
+        
+        function updateFieldState() {
+            if (checkbox.checked) {
+                field.disabled = false;
+                field.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                field.disabled = true;
+                field.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+        
+        // Initial state
+        updateFieldState();
+        
+        // Listen for checkbox changes
+        checkbox.addEventListener('change', updateFieldState);
+    }
+    
+    // Function to toggle publication year fields
+    function togglePublicationYearFields() {
+        const checkbox = document.getElementById('publication-year-enabled');
+        const fromField = document.querySelector('input[placeholder="From"]');
+        const toField = document.querySelector('input[placeholder="To"]');
+        
+        function updateFieldsState() {
+            const fields = [fromField, toField];
+            fields.forEach(field => {
+                if (checkbox.checked) {
+                    field.disabled = false;
+                    field.classList.remove('opacity-50', 'cursor-not-allowed');
+                } else {
+                    field.disabled = true;
+                    field.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+            });
+        }
+        
+        // Initial state
+        updateFieldsState();
+        
+        // Listen for checkbox changes
+        checkbox.addEventListener('change', updateFieldsState);
+    }
+    
+    // Initialize all field toggles
+    toggleField('category-enabled', 'category');
+    toggleField('author-enabled', 'author');
+    toggleField('book-type-enabled', 'book-type');
+    togglePublicationYearFields();
+});
+</script>
+
+</body></html>

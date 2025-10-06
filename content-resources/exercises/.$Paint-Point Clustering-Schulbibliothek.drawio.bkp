@@ -1,0 +1,40 @@
+<mxfile host="Electron" modified="2025-10-01T09:01:14.191Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="7KxEDWh06J9P6ioeqrPj" version="22.0.3" type="device">
+  <diagram name="Seite-1" id="hycUFZ2RP2JlObqUmxt1">
+    <mxGraphModel dx="1034" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-1" value="manuelle Erfassung&lt;br&gt;aller Prozesstätigkeiten&lt;br&gt;(B)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-2" value="Verfügbarkeit für alle Prozesse&lt;br&gt;(B)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-3" value="Verständigung bei Verzug&lt;br&gt;(B)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-4" value="Fehleranfällig durch manuelle Eingabe&lt;br&gt;(B)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-5" value="Verfügbarkeit von Büchern nur über Bibliothekar&lt;br&gt;(S)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-6" value="Verfügbarkeit von Büchern nur über Bibliothekar&lt;br&gt;(L)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-7" value="Suche in Bibliothek nach Buch&lt;br&gt;(S)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-8" value="Ausleihen und Rückgabe nur über Bibliothekar&lt;br&gt;(S)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-9" value="Ausleihen und Rückgabe nur über Bibliothekar&lt;br&gt;(L)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-10" value="Suche in Bibliothek nach Buch&lt;br&gt;(S)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

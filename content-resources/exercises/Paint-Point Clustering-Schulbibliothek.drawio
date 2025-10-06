@@ -1,0 +1,127 @@
+<mxfile host="Electron" modified="2025-10-02T11:10:30.724Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="5Ra5MfEfJxyQyDl9lMuR" version="22.0.3" type="device">
+  <diagram name="Seite-1" id="hycUFZ2RP2JlObqUmxt1">
+    <mxGraphModel dx="2594" dy="550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-22" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-1060" y="790" width="360" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-21" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-660" y="300" width="350" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-20" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="-1080" y="305" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-19" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-850" y="530" width="360" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-18" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="-1060" y="530" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-1" value="manuelle Erfassung&lt;br&gt;aller Prozesstätigkeiten&lt;br&gt;(B-5)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1020" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-2" value="Verfügbarkeit für alle Prozesse&lt;br&gt;(B-5)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-800" y="645" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-3" value="Verständigung bei Verzug&lt;br&gt;(B-3)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1040" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-4" value="Fehleranfällig durch manuelle Eingabe&lt;br&gt;(B-3)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1020" y="645" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-5" value="Auskunft über Verfübgarkeit von Büchern nur über Bibliothekar&lt;br&gt;(S-5)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1010" y="930" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-6" value="Auskunft über Verfübgarkeit von Büchern nur über Bibliothekar&lt;br&gt;(L-3)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-880" y="930" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-7" value="Suche in Bibliothek nach Buch&lt;br&gt;(S-3)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-870" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-8" value="Ausleihen und Rückgabe nur über Bibliothekar&lt;br&gt;(S-4)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-800" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-9" value="Ausleihen und Rückgabe nur über Bibliothekar&lt;br&gt;(L-3)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-670" y="645" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-10" value="Suche in Bibliothek nach Buch&lt;br&gt;(L-5)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1010" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-11" value="Versäumen der Rückgabefrist (S-3)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-900" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-12" value="Anforderung von Büchern nur über Bibliothekar &lt;br&gt;(L-2)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-670" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-13" value="Kein Überblick über angeforderte Bücher&lt;br&gt;(SL-2)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-480" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-14" value="Krankenstand von Bibliothekar&lt;br&gt;(SL-2)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-15" value="Übersicht über Buchbestand&lt;br&gt;(SL-2)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-610" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iUFjq2BpUZekfAFON1Xv-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KJHJ6bOvuYEJM3--9x6e-16" target="KJHJ6bOvuYEJM3--9x6e-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-16" value="Übersicht über fehlende Bücher&lt;br&gt;(SL-2)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-610" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-17" value="Statistik über ausgeliehene Bücher&lt;br&gt;(SL,B-2)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-480" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-23" value="- Lehrer nehmen Bücher entgegen und registrieren die Rüchnahme über Mobile App&lt;br&gt;- Eigene Rolle für Lehrer für die WebAdmin für den Ausleihprozess" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-620" y="790" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-25" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="KJHJ6bOvuYEJM3--9x6e-19" target="KJHJ6bOvuYEJM3--9x6e-23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-520" y="790" as="sourcePoint" />
+            <mxPoint x="-470" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-26" value="- Möglichkeit über Mobile - App nach verfügbaren Bücher zu suchen&lt;br&gt;- Reservierung von bereits ausgeliehenen Bücher&lt;br&gt;- suche geneerell in Bibliothe verfügbaren Büchern" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-680" y="970" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-27" value="" style="endArrow=none;html=1;rounded=0;entryX=0.936;entryY=0.735;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="KJHJ6bOvuYEJM3--9x6e-26" target="KJHJ6bOvuYEJM3--9x6e-22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-890" y="1120" as="sourcePoint" />
+            <mxPoint x="-840" y="1070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-28" value="- Identifizierung des Buchs mit QR-Code oder Strichcode&lt;br&gt;- Zuordnung bei Ausleih- und Rückgabe des Buchs, durch Namensuche oder mit personalisierten QR-Code am Smartphone&lt;br&gt;- verküpfung der Daten (Buch und Schüler/Lehrer) und durführung des jeweiligenProzesses" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1330" y="420" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-29" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="KJHJ6bOvuYEJM3--9x6e-28" target="KJHJ6bOvuYEJM3--9x6e-18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-950" y="490" as="sourcePoint" />
+            <mxPoint x="-900" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-30" value="- Schüler werden durch automatische Push - Benachrichtigung erinnert an Rückgabe&lt;br&gt;- Schüler können in App selber prüfen, wann Buch zurück gegeben werden muss&lt;br&gt;- automatisiertes Verschicken von e-mails ans Schüler wegen&amp;nbsp; Rückgabe" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-1370" y="220" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-31" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="KJHJ6bOvuYEJM3--9x6e-20" target="KJHJ6bOvuYEJM3--9x6e-30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1160" y="410" as="sourcePoint" />
+            <mxPoint x="-1110" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-32" value="- Bereistellung von Statistiken über Web-Admin App mit eigener Rolle für Schulleitung" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-820" y="160" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="KJHJ6bOvuYEJM3--9x6e-33" value="" style="endArrow=none;html=1;rounded=0;entryX=0.618;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="KJHJ6bOvuYEJM3--9x6e-21" target="KJHJ6bOvuYEJM3--9x6e-32" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-700" y="370" as="sourcePoint" />
+            <mxPoint x="-650" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iUFjq2BpUZekfAFON1Xv-2" value="Wertung:&lt;br&gt;1 ... sehr selten&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;5 ... sehr häufg&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1360" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

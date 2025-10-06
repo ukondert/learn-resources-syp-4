@@ -1,0 +1,32 @@
+<svg width="450" height="300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .card-bg { fill: #fff; stroke: #333; stroke-width: 2; }
+            .class-title-bg { fill: #f2f2f2; }
+            .class-title-text { font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; text-anchor: middle; }
+            .section-title-text { font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; }
+            .body-text { font-family: 'Courier New', Courier, monospace; font-size: 13px; }
+        </style>
+    </defs>
+
+    <rect class="card-bg" x="1" y="1" width="448" height="298" rx="5" ry="5"/>
+
+    <rect class="class-title-bg" x="2" y="2" width="446" height="35"/>
+    <text x="225" y="26" class="class-title-text">Bestellsystem</text>
+    <line x1="2" y1="37" x2="448" y2="37" stroke="#333" stroke-width="1"/>
+
+    <line x1="225" y1="37" x2="225" y2="298" stroke="#333" stroke-width="1"/>
+
+    <text x="10" y="57" class="section-title-text">Verantwortlichkeiten:</text>
+    <text x="15" y="82" class="body-text">• Bestellungen entgegen-</text>
+    <text x="15" y="97" class="body-text">  nehmen</text>
+    <text x="15" y="122" class="body-text">• Verfügbarkeit prüfen</text>
+    <text x="15" y="147" class="body-text">• Bestellstatus verwalten</text>
+
+    <text x="235" y="57" class="section-title-text">Kollaborationen:</text>
+    <text x="240" y="82" class="body-text">• Benutzer</text>
+    <text x="240" y="102" class="body-text">• Produktkatalog</text>
+    <text x="240" y="122" class="body-text">• Lager</text>
+    <text x="240" y="142" class="body-text">• Zahlungssystem</text>
+    <text x="240" y="162" class="body-text">• Versandsystem</text>
+</svg>

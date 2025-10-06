@@ -1,0 +1,28 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .card-bg { fill: #fff; stroke: #333; stroke-width: 2; }
+            .class-title-bg { fill: #f2f2f2; }
+            .class-title-text { font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: bold; text-anchor: middle; }
+            .section-title-text { font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; }
+            .body-text { font-family: 'Courier New', Courier, monospace; font-size: 13px; }
+        </style>
+    </defs>
+
+    <rect class="card-bg" x="1" y="1" width="398" height="248" rx="5" ry="5"/>
+
+    <rect class="class-title-bg" x="2" y="2" width="396" height="30"/>
+    <text x="200" y="22" class="class-title-text">Class: Member</text>
+    <line x1="2" y1="32" x2="398" y2="32" stroke="#333" stroke-width="1"/>
+
+    <text x="10" y="52" class="section-title-text">Responsibilities:</text>
+    <text x="15" y="72" class="body-text">- Knows its own ID, name, member_type</text>
+    <text x="15" y="92" class="body-text">  (student/teacher)</text>
+    <text x="15" y="112" class="body-text">- Knows its current loans</text>
+    <text x="15" y="132" class="body-text">- Can borrow a book</text>
+    <text x="15" y="152" class="body-text">- Can return a book</text>
+    <line x1="2" y1="172" x2="398" y2="172" stroke="#333" stroke-width="1"/>
+
+    <text x="10" y="192" class="section-title-text">Collaborators:</text>
+    <text x="15" y="212" class="body-text">- Loan</text>
+</svg>
